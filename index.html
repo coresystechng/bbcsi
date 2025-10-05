@@ -82,6 +82,13 @@
           padding: 8rem 0;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
+
+      .myth-section {
+          /* Better placeholder image */
+          background: url('assets/img/2148959216.jpg') center center/cover no-repeat;
+          min-height: 60vh;
+          padding: 8rem 0;
+      }
       .card-program {
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           border-radius: 12px;
@@ -159,7 +166,7 @@
         </div>
     </section>
 
-    <!-- C. The Problem & The Solution (About Us Snippet) -->
+    <!-- C.1 - The Problem (About Us Snippet) -->
     <section class="py-5 bg-white">
       <div class="container">
         <div class="row align-items-center">
@@ -174,10 +181,11 @@
         </div>
       </div>
     </section>
+    <!-- C.2 - The Solution (About Us Snippet)-->
     <section class="py-5 my-0">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col my-5">
+          <div class="col my-5" data-aos="fade-up" data-aos-delay="400"">
             <p class="lead lh-lg heading text-center display-6">
                   We stand with every woman in Benue, <b class="bbc-pink-text"> offering education, emotional support, and practical financial help.</b> We bring truth, hope, and resources so that no woman fights alone.
                   <a href="#" class="btn bbc-btn-pink btn-sm mt-3 fw-bold py-4 rounded-pill">Read Our Full Mission &rarr;</a>
@@ -190,43 +198,43 @@
 
     <!-- D. Quick Program Overview -->
     <section class="py-5 bg-white">
-        <div class="container text-center">
+        <div class="container py-5 text-center">
             <h2 class="mb-5 display-5 fw-bold heading">What We Do</h2>
             <div class="row g-4">
                 <!-- Program 1: Support Group -->
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card card-program h-100 p-4 text-center bg-body-tertiary">
-                        <i class="bi bi-people-fill program-icon bbc-pink-text"></i>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
+                        <i class="bi bi-people-fill program-icon text-white"></i>
                         <h5 class="card-title fw-bold">Support Group</h5>
                         <p class="card-text">A safe, welcoming space for women and their families to share experiences and find strength together.</p>
-                        <a href="#" class="stretched-link text-decoration-none bbc-pink-text fw-bold">Learn More</a>
+                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Learn More</a>
                     </div>
                 </div>
                 <!-- Program 2: Awareness Campaigns -->
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card card-program h-100 p-4 text-center bg-body-tertiary">
-                        <i class="bi bi-megaphone-fill program-icon bbc-pink-text"></i>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
+                        <i class="bi bi-megaphone-fill program-icon text-white"></i>
                         <h5 class="card-title fw-bold">Awareness & Outreach</h5>
-                        <p class="card-text">Church visits, market outreaches, and radio talks that spread information on early detection.</p>
-                        <a href="#" class="stretched-link text-decoration-none bbc-pink-text fw-bold">View Events</a>
+                        <p class="card-text">Church visits, market outreaches, television and radio talks that spread information on early detection and treatment.</p>
+                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">View Events</a>
                     </div>
                 </div>
                 <!-- Program 3: Treatment Loans -->
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card card-program h-100 p-4 text-center bg-body-tertiary">
-                        <i class="bi bi-cash-coin program-icon bbc-pink-text"></i>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
+                        <i class="bi bi-cash-coin program-icon text-white"></i>
                         <h5 class="card-title fw-bold">Treatment Loans</h5>
                         <p class="card-text">Low-interest, long-term loans for members actively undergoing treatment, easing the financial burden.</p>
-                        <a href="#" class="stretched-link text-decoration-none bbc-pink-text fw-bold">Get Assistance</a>
+                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Get Assistance</a>
                     </div>
                 </div>
                 <!-- Program 4: Partnerships -->
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card card-program h-100 p-4 text-center bg-body-tertiary">
-                        <i class="bi bi-building-fill-add program-icon bbc-pink-text"></i>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
+                        <i class="bi bi-building-fill-add program-icon text-white"></i>
                         <h5 class="card-title fw-bold">Community Partnerships</h5>
                         <p class="card-text">Collaboration with hospitals and local leaders to expand screening access and strengthen support networks.</p>
-                        <a href="#" class="stretched-link text-decoration-none bbc-pink-text fw-bold">Partner With Us</a>
+                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Partner With Us</a>
                     </div>
                 </div>
             </div>
@@ -234,20 +242,17 @@
     </section>
 
     <!-- E. Myth Buster Highlight -->
-    <section class="py-5 bbc-pink-bg text-white">
-        <div class="container text-center" data-aos="zoom-in">
+    <section class="py-5 bg-black text-white myth-section">
+        <div class="container text-start py-5" data-aos="fade-right">
             <h2 class="mb-4 display-6 fw-bold">Breaking Myths, Building Hope.</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="p-4 bg-white text-dark rounded-3 shadow-lg">
-                        <h3 class="h5 fw-bold text-start mb-3 bbc-pink-text">Core Message:</h3>
-                        <p class="lead text-start mb-0">
-                            Breast cancer is **not a curse**. It is a disease we can fight together with knowledge, early detection, and proper medical care.
-                        </p>
-                    </div>
+            <div class="row justify-content-start">
+                <div class="col-md-6 bbc-pink-bg shadow-lg display-6 p-4 rounded-4">
+                  <p class="text-start mb-0">
+                      Breast cancer is not a curse. <br> It is a disease we can fight together with knowledge, early detection, and proper medical care.
+                  </p>
                 </div>
             </div>
-            <a href="resources.html" class="btn btn-light btn-lg mt-4 fw-bold rounded-pill">See All Facts vs. Myths & FAQs &rarr;</a>
+            <a href="resources.html" class="btn btn-light btn-lg mt-4 bbc-btn-pink fw-bold rounded-pill">See All Facts vs. Myths & FAQs &rarr;</a>
         </div>
     </section>
 
