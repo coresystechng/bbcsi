@@ -19,10 +19,10 @@
     <!-- Custom Styles -->
     <style>
       :root {
-        --bbc-pink: #D63384; /* A bright, hopeful pink */
+        --bbc-pink: #B33871; /* A bright, hopeful pink */
         --bbc-pink-light: #fce4ec; /* Very light pink background */
-        --bbc-secondary: #f8f9fa; /* Off-white for section breaks */
-        --bbc-dark-text: #212529;
+        --bbc-secondary: #B9B7C0; /* Off-white for section breaks */
+        --bbc-dark-text: #555457;
       }
       .heading {
         font-family: 'Marko One', sans-serif;
@@ -86,7 +86,7 @@
       .myth-section {
           /* Better placeholder image */
           background: url('assets/img/2148959216.jpg') center center/cover no-repeat;
-          min-height: 60vh;
+          min-height: 80vh;
           padding: 8rem 0;
       }
       .card-program {
@@ -97,7 +97,7 @@
       }
       .card-program:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 25px rgba(214, 51, 132, 0.2); /* Pinker, more noticeable hover shadow */
+          box-shadow: 0 10px 25px rgba(29, 27, 28, 0.2); /* Pinker, more noticeable hover shadow */
           border-color: var(--bbc-pink);
       }
       .navbar-brand {
@@ -118,6 +118,18 @@
       .navbar-nav .nav-link:hover {
           color: var(--bbc-pink) !important;
       }
+
+      .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: #B33871;
+      color: #fff;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
     </style>
 </head>
 <body>
@@ -168,7 +180,7 @@
 
     <!-- C.1 - The Problem (About Us Snippet) -->
     <section class="py-5 bg-white">
-      <div class="container">
+      <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <h2 class="display-6 fw-bold bbc-pink-text mb-4 heading">From Silence to Strength.</h2>
@@ -182,7 +194,7 @@
       </div>
     </section>
     <!-- C.2 - The Solution (About Us Snippet)-->
-    <section class="py-5 my-0">
+    <section class="py-5 my-0 bg-body-secondary">
       <div class="container">
         <div class="row align-items-center">
           <div class="col my-5" data-aos="fade-up" data-aos-delay="400"">
@@ -197,44 +209,45 @@
     </section>
 
     <!-- D. Quick Program Overview -->
-    <section class="py-5 bg-white">
+    <section class="py-5 bg-body">
         <div class="container py-5 text-center">
-            <h2 class="mb-5 display-5 fw-bold heading">What We Do</h2>
+            <h2 class="display-5 fw-bold heading bbc-pink-text">What We Do</h2>
+            <p class="mb-5 lead lh-lg">Since its inception, BBCSI has organized in-person awareness campaigns every October in different local governments of Benue State. To date, our programs include:</p>
             <div class="row g-4">
                 <!-- Program 1: Support Group -->
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
-                        <i class="bi bi-people-fill program-icon text-white"></i>
+                    <div class="card card-program h-100 p-4 text-center">
+                        <i class="bi bi-people-fill program-icon bbc-pink-text"></i>
                         <h5 class="card-title fw-bold">Support Group</h5>
                         <p class="card-text">A safe, welcoming space for women and their families to share experiences and find strength together.</p>
-                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Learn More</a>
+                        <a href="#" class="btn bbc-pink-bg text-white fw-bold">Learn More</a>
                     </div>
                 </div>
                 <!-- Program 2: Awareness Campaigns -->
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
-                        <i class="bi bi-megaphone-fill program-icon text-white"></i>
+                    <div class="card card-program h-100 p-4 text-center">
+                        <i class="bi bi-megaphone-fill program-icon bbc-pink-text"></i>
                         <h5 class="card-title fw-bold">Awareness & Outreach</h5>
                         <p class="card-text">Church visits, market outreaches, television and radio talks that spread information on early detection and treatment.</p>
-                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">View Events</a>
+                        <a href="#" class="btn bbc-pink-bg text-white fw-bold">View Events</a>
                     </div>
                 </div>
                 <!-- Program 3: Treatment Loans -->
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
-                        <i class="bi bi-cash-coin program-icon text-white"></i>
+                    <div class="card card-program h-100 p-4 text-center">
+                        <i class="bi bi-cash-coin program-icon bbc-pink-text"></i>
                         <h5 class="card-title fw-bold">Treatment Loans</h5>
                         <p class="card-text">Low-interest, long-term loans for members actively undergoing treatment, easing the financial burden.</p>
-                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Get Assistance</a>
+                        <a href="#" class="btn bbc-pink-bg text-white fw-bold">Get Assistance</a>
                     </div>
                 </div>
                 <!-- Program 4: Partnerships -->
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card card-program h-100 p-4 text-center bbc-pink-bg text-white">
-                        <i class="bi bi-building-fill-add program-icon text-white"></i>
+                    <div class="card card-program h-100 p-4 text-center">
+                        <i class="bi bi-building-fill-add program-icon bbc-pink-text"></i>
                         <h5 class="card-title fw-bold">Community Partnerships</h5>
                         <p class="card-text">Collaboration with hospitals and local leaders to expand screening access and strengthen support networks.</p>
-                        <a href="#" class="btn bbc-btn-pink bg-white bbc-pink-text fw-bold">Partner With Us</a>
+                        <a href="#" class="btn bbc-pink-bg text-white fw-bold">Partner With Us</a>
                     </div>
                 </div>
             </div>
@@ -244,77 +257,185 @@
     <!-- E. Myth Buster Highlight -->
     <section class="py-5 bg-black text-white myth-section">
         <div class="container text-start py-5" data-aos="fade-right">
-            <h2 class="mb-4 display-6 fw-bold">Breaking Myths, Building Hope.</h2>
+            <h2 class="mb-4 display-6 fw-bold heading">Breaking Myths, Building Hope.</h2>
             <div class="row justify-content-start">
-                <div class="col-md-6 bbc-pink-bg shadow-lg display-6 p-4 rounded-4">
-                  <p class="text-start mb-0">
+                <div class="col-md-6 shadow-lg p-4 rounded-4">
+                  <p class="lead h1 fw-bolder display-6 text-start mb-0">
                       Breast cancer is not a curse. <br> It is a disease we can fight together with knowledge, early detection, and proper medical care.
                   </p>
                 </div>
             </div>
-            <a href="resources.html" class="btn btn-light btn-lg mt-4 bbc-btn-pink fw-bold rounded-pill">See All Facts vs. Myths & FAQs &rarr;</a>
+            <a href="resources.html" class="btn btn-light btn-lg mt-4 bbc-btn-pink bg-white bbc-pink-text fw-bold rounded-pill">See All Facts vs. Myths & FAQs &rarr;</a>
         </div>
     </section>
 
     <!-- F. Get Involved Summary -->
-    <section class="py-5 bg-white">
-        <div class="container text-center">
-            <h2 class="mb-5 display-5 fw-bold">How You Can Get Involved</h2>
+    <section class="py-5  bg-black bg-gradient text-white">
+      <div class="container py-5">
+        <div class="row py-5 align-items-center">
+          <!-- Left Column -->
+          <div class="col-lg-5 mb-5 align-self-start">
+            <h2 class="fw-bold mb-3 heading">Ways to Get Involved</h2>
+            <p class="lead text-light-emphasis">
+              Your involvement, no matter how small, <br> helps save lives. 
+            </p>
+            <button class="btn bbc-btn-pink mt-3">Contact Us</button>
+            <br><br>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-lg-7">
             <div class="row g-4">
-                <!-- Audience 1: Patients & Survivors -->
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
-                    <div class="card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body">
-                            <span class="program-icon bbc-pink-text">&#x1F469;</span>
-                            <h5 class="card-title fw-bold">Patients & Survivors</h5>
-                            <p class="card-text">You are not alone. Join our support group to find encouragement and resources.</p>
-                            <a href="mailto:Benuecancergroup@gmail.com" class="btn btn-sm btn-outline-secondary rounded-pill mt-2">Join the Group</a>
-                        </div>
-                    </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <div class="feature-icon p-3 me-3">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-semibold">For Patients & Survivors</h5>
+                    <p class="text-light-emphasis mb-0">You are not alone. Join our support group and find encouragement, resources, and hope.</p>
+                  </div>
                 </div>
-                <!-- Audience 2: Caregivers -->
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body">
-                            <span class="program-icon bbc-pink-text">&#x1F9D1;</span>
-                            <h5 class="card-title fw-bold">Caregivers</h5>
-                            <p class="card-text">Learn how to provide compassionate care while ensuring you also care for yourself.</p>
-                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill mt-2">Get Tips & Resources</a>
-                        </div>
-                    </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <div class="feature-icon p-3 me-3">
+                    <i class="bi bi-info-circle-fill"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-semibold">For Volunteers & Caregivers</h5>
+                    <p class="text-light-emphasis mb-0">Learn how to provide compassionate care while also caring for yourself.</p>
+                  </div>
                 </div>
-                <!-- Audience 3: Donors & Partners -->
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
-                    <div class="card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body">
-                            <span class="program-icon bbc-pink-text">&#x1F4B5;</span>
-                            <h5 class="card-title fw-bold">Donors & Partners</h5>
-                            <p class="card-text">Your contribution directly challenges dangerous myths and provides life-saving assistance.</p>
-                            <a href="#" class="btn btn-sm bbc-btn-pink rounded-pill mt-2">Give Today</a>
-                        </div>
-                    </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <div class="feature-icon p-3 me-3">
+                    <i class="bi bi-cash-coin"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-semibold">For Donors & Partners</h5>
+                    <p class="text-light-emphasis mb-0">Your support helps educate communities, challenge dangerous myths, and provide treatment assistance.</p>
+                  </div>
                 </div>
-                <!-- Audience 4: Professionals -->
-                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="400">
-                    <div class="card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body">
-                            <span class="program-icon bbc-pink-text">&#x2695;</span>
-                            <h5 class="card-title fw-bold">Health Professionals</h5>
-                            <p class="card-text">Collaborate with us to strengthen cancer care systems across Benue State.</p>
-                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill mt-2">Let's Collaborate</a>
-                        </div>
-                    </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <div class="feature-icon p-3 me-3">
+                    <i class="bi bi-building-fill-add"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-semibold">For Policymakers & Health Professionals</h5>
+                    <p class="text-light-emphasis mb-0">Collaborate with us to strengthen breast cancer care systems and reduce stigma across Benue State.</p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- Our Team Section -->
+    <section class="py-5 bg-body-secondary">
+      <div class="container py-5">
+        <h2 class="display-5 fw-bold heading bbc-pink-text text-center mb-5">Meet Our Team</h2>
+        <div class="row py-5 g-4 justify-content-center">
+          <!-- Team Member 1 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <img src="assets/img/Hannah Mngohol Tiohn.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 1" style="width:120px; height:120px; object-fit:cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Hannah Mngohol Tiohn</h5>
+                <p class="card-text mb-2 bbc-pink-text fw-semibold">Chairperson</p>
+                <p class="card-text small">A passionate advocate for women's health, leading BBCSI with vision and compassion.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <img src="assets/img/Scholastica Mnena Lan FPSN.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 2" style="width:120px; height:120px; object-fit:cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Scholastica M. Lan, FPSN</h5>
+                <p class="card-text mb-2 bbc-pink-text fw-semibold">Secretary</p>
+                <p class="card-text small">Keeps our mission organized and running smoothly, coordinating communication and documentation.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <img src="assets/img/Flourence Mbachaga.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 3" style="width:120px; height:120px; object-fit:cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Flourence Mbachaga</h5>
+                <p class="card-text mb-2 bbc-pink-text fw-semibold">Assistant Secretary</p>
+                <p class="card-text small">Assists in organizing outreach and support activities, connecting women to vital resources.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 4 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <img src="assets/img/Grace Erdoo Ateata.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 4" style="width:120px; height:120px; object-fit:cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Grace Erdoo Ateata</h5>
+                <p class="card-text mb-2 bbc-pink-text fw-semibold">Treasurer</p>
+                <p class="card-text small">Manages donor and partner relations and ensures transparency in all financial matters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="py-5 bg-body" id="contact">
+      <div class="container">
+        <h2 class="display-5 fw-bold heading bbc-pink-text text-center mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <form action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain" class="bg-white p-4 rounded-4 shadow-sm bg-body-secondary">
+              <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Your Name</label>
+              <input type="text" class="form-control" id="name" name="Name" required>
+              </div>
+              <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Your Email</label>
+              <input type="email" class="form-control" id="email" name="Email" required>
+              </div>
+              <div class="mb-3">
+              <label for="role" class="form-label fw-semibold">I am a...</label>
+              <select class="form-select" id="role" name="Role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Patients/Survivors">Patient/Survivor</option>
+                <option value="Caregivers">Caregiver</option>
+                <option value="Donors & Partners">Donor & Partner</option>
+                <option value="Policymakers & Health Professionals">Policymaker & Health Professional</option>
+              </select>
+              </div>
+              <div class="mb-3">
+              <label for="message" class="form-label fw-semibold">Message</label>
+              <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+              </div>
+              <div class="d-grid">
+              <button type="submit" class="btn bbc-btn-pink btn-lg fw-bold">Send Message</button>
+              </div>
+            </form>
+            <p class="text-center mt-3 small text-muted">We'll get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- G. Footer -->
     <footer class="py-5 bbc-pink-bg text-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold">BBCSI</h5>
+                    <img src="assets/img/bbcsi_logo.jpg" alt="BBCSI Logo" width="50">
                     <p>Benue Breast Cancer Support Initiative. From Silence to Strength.</p>
                     <div class="mt-3">
                         <a href="#" class="text-white me-3">&#x1F4F1;</a> <!-- Placeholder for Social Icons -->
@@ -369,4 +490,3 @@
     </script>
 </body>
 </html>
-x
