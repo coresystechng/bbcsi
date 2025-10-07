@@ -1,39 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Donate</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>:root{--bs-primary:#390035;}</style>
+  <title>Donate — BBCSI</title>
+  <link rel="shortcut icon" href="assets/img/bbcsi_logo.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    :root{ --bbc-pink: #da2968; --bbc-secondary:#B9B7C0; --bbc-dark-text:#555457; }
+    body{ background:var(--bbc-secondary); color:var(--bbc-dark-text); font-family:'Funnel Display',sans-serif; }
+    .heading{ font-family:'Marko One',sans-serif; }
+    .bbc-btn-pink{ background:var(--bbc-pink); border:2px solid var(--bbc-pink); color:#fff; padding:.6rem 1.2rem; border-radius:50px; font-weight:700; }
+    .hero-donate{ background:linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/PHOTO-2024-04-13-13-42-35.jpg') center/cover no-repeat; min-height:38vh; color:#fff; display:flex; align-items:center; }
+    .impact-box{ background:#fff; border-radius:12px; padding:1.25rem; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-light border-bottom">
-  <div class="container">
-    <a class="navbar-brand text-primary" href="index.html">BBCSI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="requiem.html">Requiem</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-      <a class="btn btn-outline-primary ms-3" href="loan.html">Apply Loan</a>
-      <a class="btn btn-primary ms-2" href="donate.html">Donate</a>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/bbcsi_logo.jpg" alt="BBCSI" width="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 align-items-center">
+            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="resources.html">Resources</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-donate text-center">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-5 fw-bold heading">Support BBCSI</h1>
+      <p class="lead mt-3" style="max-width:820px; margin:0 auto;">Your donation funds screening outreaches, treatment loans, and education that saves lives across Benue State.</p>
+      <a href="#giving" class="btn bbc-btn-pink mt-3">Give Now</a>
     </div>
-  </div>
-</nav>
-<main class='container py-5'><h1 class='text-primary mb-4'>Donate</h1><form><input type='number' class='form-control mb-2' placeholder='Amount (NGN)'/><input type='text' class='form-control mb-2' placeholder='Your Name'/><input type='email' class='form-control mb-2' placeholder='Your Email'/><button class='btn btn-primary'>Proceed to Payment</button></form></main>
-<footer class="bg-dark text-light text-center py-3">
-  <div class="container">&copy; <span id="year"></span> BBCSI. All Rights Reserved.</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  </section>
+
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-7" data-aos="fade-up">
+        <h2 class="fw-bold heading bbc-pink-text">Why Give?</h2>
+        <p class="lead">Late detection and financial barriers make breast cancer deadly for many women in Benue. By donating, you help us find cancer earlier, keep women in treatment, and change harmful beliefs through community education.</p>
+
+        <div class="row mt-4 g-3">
+          <div class="col-md-6">
+            <div class="impact-box">
+              <h5 class="fw-bold">NGN 5,000</h5>
+              <p class="small mb-0">Covers transport for a woman to attend a follow-up appointment.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="impact-box">
+              <h5 class="fw-bold">NGN 20,000</h5>
+              <p class="small mb-0">Helps subsidize diagnostic tests for one patient.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="impact-box">
+              <h5 class="fw-bold">NGN 50,000</h5>
+              <p class="small mb-0">Supports community screening for 30 people.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="impact-box">
+              <h5 class="fw-bold">Custom Gift</h5>
+              <p class="small mb-0">Choose an amount to support loans or outreach — every gift helps.</p>
+            </div>
+          </div>
+        </div>
+
+        <section id="giving" class="mt-5">
+          <h3 class="fw-bold">Quick Gift</h3>
+          <p class="small text-muted">(This form is a placeholder — integrate a payment gateway to accept online payments.)</p>
+          <form class="row g-2" action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain">
+            <div class="col-md-6">
+              <label class="form-label">Amount (NGN)</label>
+              <input type="number" class="form-control" name="Amount" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Your name</label>
+              <input class="form-control" name="Name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="Email" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone (optional)</label>
+              <input class="form-control" name="Phone">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message (optional)</label>
+              <textarea class="form-control" name="Message" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <div class="d-flex gap-2">
+                <button class="btn bbc-btn-pink" type="submit">Proceed (placeholder)</button>
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <aside class="col-lg-5" data-aos="fade-left">
+        <div class="bg-white p-4 rounded-4 shadow-sm">
+          <h4 class="fw-bold">Other ways to give</h4>
+          <h6 class="mt-3">Bank Transfer</h6>
+          <p class="small mb-0">Account name: Benue Breast Cancer Support Initiative<br>Account number: 0123456789<br>Bank: Example Bank</p>
+
+          <h6 class="mt-3">Mobile / USSD</h6>
+          <p class="small mb-0">Send to +234 700 000 0000 (example mobile) — include donor name in reference.</p>
+
+          <h6 class="mt-3">In-kind support</h6>
+          <p class="small mb-0">We accept screening supplies, printed materials, and transport support for outreach days. Email <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a> to arrange drop-off or collection.</p>
+
+          <div class="mt-4">
+            <h6 class="fw-semibold">Transparency</h6>
+            <p class="small mb-0">We publish an annual summary of funds and program outcomes. Donors receive updates about how their contribution helped women and communities.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-5 bbc-pink-text bg-body">
+    <hr>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="assets/img/bbcsi_logo-p.png" alt="BBCSI Logo" width="65" class="mb-2">
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old GRA, <br> Gboko, Benue State.</p>
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email:</b> Benuecancergroup@gmail.com</p>
+          <p class="mb-1 text-black-50"><b class="bbc-pink-text">Phone:</b> +234 703 301 1348 </p>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h6 class="fw-bold">About BBCSI</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
+            <li><a href="#" class="text-black-50 text-decoration-none">What We Do</a></li>
+            <li><a href="#" class="text-black-50 text-decoration-none">Meet the Team</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h6 class="fw-bold">Resources</h6>
+          <ul class="list-unstyled">
+            <li><a href="resources.html" class="text-black-50 text-decoration-none">FAQs</a></li>
+            <li><a href="resources.html" class="text-black-50 text-decoration-none">Resources</a></li>
+            <li><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h6 class="fw-bold">Social Media</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-black-50 text-decoration-none">YouTube</a></li>
+            <li><a href="#" class="text-black-50 text-decoration-none">Facebook</a></li>
+            <li><a href="blog.html" class="text-black-50 text-decoration-none">Latest Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h6 class="fw-bold">Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-black-50 text-decoration-none">Terms of Use</a></li>
+            <li><a href="#" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-4 border-top border-light border-opacity-25 mt-4">
+        <small>&copy; 2025 Benue Breast Cancer Support Initiative. All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>window.onload=function(){AOS.init({duration:1000,once:true});};</script>
 </body>
 </html>
