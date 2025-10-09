@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="assets/img/bbcsi_logo.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+     .image-container-1 {
+        position: relative;
+        background: url('assets/img/2151516432.jpg') center center/cover no-repeat; min-height: 70vh;
+        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
+      }
+      .image-container-2 {
+        position: relative;
+        background: url('assets/img/2147663845.jpg') center center/cover no-repeat; min-height: 70vh;
+        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
+      }
+      .image-container-3 {
+        position: relative;
+        background: url('assets/img/2149117861.jpg') center center/cover no-repeat; min-height: 70vh;
+        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
+      }
+      .image-container-4 {
+        position: relative;
+        background: url('assets/img/2149351983.jpg') center center/cover no-repeat; min-height: 70vh;
+        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
+      }
+
+      .blur-overlay-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%; /* controls how much of the left side is blurred */
+        height: 100%;
+        backdrop-filter: blur(8px);
+        background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0) 100%
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0.5) 0%,
+        );
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+      .blur-overlay-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%; /* controls how much of the left side is blurred */
+        height: 100%;
+        backdrop-filter: blur(8px);
+        background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.3) 40%,
+        rgba(0, 0, 0, 0.1) 80%,
+        rgba(0, 0, 0, 0) 100%
+        );
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        .blur-overlay-left, .blur-overlay-right {
+          width: 100%;
+          height: 20%;
+          top: auto;
+          bottom: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          padding: 1.5rem;
+        }
+      }
+
+      .blur-overlay h4 {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+      }
+
+      .blur-overlay p {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+        opacity: 0.9;
+      }
+  </style>
+</head>
+<body>
+  <div class="image-container-1">
+      <!-- <img src="assets/img/2148959218.jpg" class="" alt="Sample Image"> -->
+      <div class="blur-overlay-left">
+        <div class="mx-5">
+          <h1 class="fw-bold mb-2 display-6 bbc-pink-text">Support Groups & Survivorship</h1>
+          <p class="">Peer-led groups provide emotional support, practical advice and a safe space to share experiences. <br> We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-container-2">
+      <div class="blur-overlay-right">
+        <div>
+          <h1 class="fw-bold mb-2 display-5 bbc-pink-text">Support Groups & Survivorship</h1>
+          <p class="lead display-6 lh-sm text-lg-start">Peer-led groups provide emotional support, practical advice and a safe space to share experiences. <br> We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-container-3">
+      <div class="blur-overlay-left">
+        <div>
+          <h4 class="fw-bold mb-2">Blurred Left Side</h4>
+          <p class="mb-0">You can add your text or logo here</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-container-4">
+      <div class="blur-overlay-right">
+        <div>
+          <h4 class="fw-bold mb-2">Blurred Left Side</h4>
+          <p class="mb-0">You can add your text or logo here</p>
+        </div>
+      </div>
+    </div>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>window.onload=function(){AOS.init({duration:1000,once:true});};</script>
+</html>
