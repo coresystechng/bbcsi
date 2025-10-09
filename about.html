@@ -25,9 +25,19 @@
       .bbc-btn-pink { background-color: var(--bbc-pink); border: 2px solid var(--bbc-pink); color: white; font-weight: 700; padding: 0.6rem 1.75rem; transition: all 0.25s ease; border-radius: 50px; }
       .bbc-btn-pink:hover { background-color: #c02b74; border-color: #c02b74; transform: translateY(-2px); }
       .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/PHOTO-2022-10-22-11-10-31.jpg') center center/cover no-repeat; min-height: 90vh; color: white; display:flex; align-items:center; }
-      .feature-icon { width:3rem; height:3rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+      .feature-icon {background-color:#da2968; color:#fff; border-radius:0.5rem; display:inline-block; font-size:1.2rem; }
       .team-card img { width:110px; height:110px; object-fit:cover; }
       .lead-compact { max-width: 820px; margin:0 auto; }
+      .icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      }
     </style>
 </head>
 <body>
@@ -62,54 +72,75 @@
   <section class="hero-about text-center">
     <div class="container py-5" data-aos="fade-up">
       <h1 class="display-5 fw-bold heading">About Benue Breast Cancer Support Initiative</h1>
-      <p class="lead mt-3 lead-compact">We exist to break the stigma around breast cancer in Benue State, provide accurate information, link women to screening and treatment, and offer financial and emotional support to those who need it most.</p>
-      <a href="#mission" class="btn bbc-btn-pink mt-3">Our Mission</a>
+      <p class="lead mt-3 lead-compact">We exist to break the stigma around breast cancer in Benue State, and provide support to those who need it most.</p>
+      <a href="#story" class="btn bbc-btn-pink mt-3">Learn More</a>
     </div>
   </section>
-
-  <!-- Mission / Vision / Values -->
-  <section id="mission" class="py-5 bg-white">
+  <!-- History & Impact -->
+  <section class="py-5 bg-body" id="story">
     <div class="container py-5">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="display-6 fw-bold bbc-pink-text heading">Our Mission</h2>
-          <p class="lead">To educate communities across Benue State about early detection, to support patients and survivors with financial and psycho-social services, and to advocate for better access to care.</p>
-
-          <h3 class="mt-4 fw-bold">Our Vision</h3>
-          <p>Every woman in Benue State lives in a community that recognizes breast cancer early and supports her through diagnosis, treatment, and recovery.</p>
-
-          <h3 class="mt-4 fw-bold">Our Values</h3>
-          <ul>
-            <li>Compassion: We meet women where they are and provide non-judgmental care.</li>
-            <li>Truth: We replace myths with accurate, accessible information.</li>
-            <li>Collaboration: We partner with health workers, community leaders and donors.</li>
-            <li>Transparency: We steward resources responsibly and openly.</li>
-          </ul>
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up">
+          <h2 class="display-6 fw-bold heading bbc-pink-text">Our Story</h2>
+          <p class="lead">BBCSI grew from conversations among survivors, caregivers and health workers who were tired of silence and harmful myths surrounding breast cancer. Since then, we have run awareness campaigns, screening drives, support groups and a small treatment loan program — all tailored to women living in Benue state.</p>
+          <a href="" target="_blank" class="bbc-pink-text">Read Our Founder's Breast Cancer Story</a><i class="bi bi-link-45deg bbc-pink-text"></i>
+          <br><br>
+          <p class="lead">Too often, a diagnosis is hidden for fear of gossip, discrimination, or beliefs that breast cancer is caused by witchcraft or spiritual attacks. We offer education, support, and practical help so that no woman fights alone. Together, we can replace myths with understanding, and secrecy with strength.</p>
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img src="assets/img/PHOTO-2018-11-08-07-03-23.jpg" class="img-fluid rounded-4 shadow" alt="About BBCSI">
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+          <h5 class="fw-bold">Impact at a glance</h5>
+          <div class="row g-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                  <div class="col-6">
+                      <div class="card border-0 h-100 shadow-sm text-center p-4">
+                          <div class="display-4 fw-bold bbc-pink-text mb-2">2,000+</div>
+                          <p class="mb-0 fw-light">people reached through outreach programs</p>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card border-0 h-100 shadow-sm text-center p-4">
+                          <div class="display-4 fw-bold bbc-pink-text mb-2">150+</div>
+                          <p class="mb-0 fw-light">women supported with counselling</p>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card border-0 h-100 shadow-sm text-center p-4">
+                          <div class="display-4 fw-bold bbc-pink-text mb-2">10+</div>
+                          <p class="mb-0 fw-light">treatment loans provided to date</p>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card border-0 h-100 shadow-sm text-center p-4">
+                          <div class="display-4 fw-bold bbc-pink-text mb-2">5+</div>
+                          <p class="mb-0 fw-light">health facility partnership</p>
+                      </div>
+                  </div>
+              </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- History & Impact -->
-  <section class="py-5 bg-body-secondary">
+  <!-- Mission / Vision / Values -->
+  <section id="mission" class="py-5 bg-white bg-body-secondary">
     <div class="container py-5">
-      <div class="row">
-        <div class="col-md-7" data-aos="fade-up">
-          <h2 class="display-6 fw-bold heading bbc-pink-text">Our Story</h2>
-          <p class="lead">BBCSI grew from conversations among survivors, caregivers and health workers who were tired of silence and harmful myths preventing women from seeking care. Since then, we've run awareness campaigns, screening drives, support groups and a small treatment loan program — all tailored to local realities across Benue.</p>
-          <p>We focus on community-led outreach: church and market talks, radio programs in local languages, and partnerships with clinics to expand screening. When a woman is diagnosed, we help her navigate care and, where needed, provide financial assistance so treatment isn't interrupted because of cost.</p>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card border-0 bbc-pink-bg shadow-lg h-100 shadow-sm p-4">
+            <div class="icon-box bg-white mb-4">
+                <i class="bi bi-eye bbc-pink-text"></i>
+            </div>
+            <h3 class="text-white">Our Vision</h3>
+            <p class="lead text-white">To dismantle the culture of fear, myth, secrecy and silence surrounding breast cancer among women of African descent. </p> 
+          </div>
         </div>
-        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="fw-bold">Impact at a glance</h3>
-          <ul class="list-unstyled">
-            <li class="mb-2"><strong>2000+</strong> people reached through outreach events</li>
-            <li class="mb-2"><strong>150+</strong> women supported with counseling and referrals</li>
-            <li class="mb-2"><strong>50+</strong> treatment loans provided to date</li>
-            <li class="mb-2"><strong>10+</strong> health facility partnerships strengthened</li>
-          </ul>
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card border-0 shadow-lg h-100 shadow-sm p-4">
+            <div class="icon-box bbc-pink-bg mb-4">
+                <i class="bi bi-bullseye text-white"></i>
+            </div>
+            <h3 class="bbc-pink-text">Our Mission</h3>
+            <p class="lead">To engage in advocacy, encourage regular breast self-exams and offer support to members actively undergoing care.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -123,69 +154,93 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" data-aos="fade-up">
           <div class="card h-100 p-4 text-center border-0 shadow-sm">
-            <i class="bi bi-megaphone-fill feature-icon mb-3"></i>
+            <div class="text-center mb-2">
+              <i class="bi bi-megaphone-fill feature-icon px-3 py-2"></i>
+            </div>
             <h5 class="fw-bold">Awareness</h5>
-            <p class="small">Community talks, radio and church outreach to change beliefs and encourage screening.</p>
+            <p class="small fw-light">Community talks, radio and church outreach to change beliefs and encourage screening.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100 p-4 text-center border-0 shadow-sm">
-            <i class="bi bi-people-fill feature-icon mb-3"></i>
+            <div class="text-center mb-2">
+              <i class="bi bi-people-fill feature-icon px-3 py-2"></i>
+            </div>
             <h5 class="fw-bold">Support Groups</h5>
-            <p class="small">Peer-led groups where patients and survivors share experiences and practical advice.</p>
+            <p class="small fw-light">Peer-led groups where patients and survivors share experiences and practical advice.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100 p-4 text-center border-0 shadow-sm">
-            <i class="bi bi-cash-coin feature-icon mb-3"></i>
+            <div class="text-center mb-2">
+              <i class="bi bi-cash-coin feature-icon px-3 py-2"></i>
+            </div>
             <h5 class="fw-bold">Treatment Loans</h5>
-            <p class="small">Low-interest loans to help women complete prescribed treatment without financial interruption.</p>
+            <p class="small fw-light">Low-interest loans to help women complete prescribed treatment without financial interruption.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
           <div class="card h-100 p-4 text-center border-0 shadow-sm">
-            <i class="bi bi-building-fill-add feature-icon mb-3"></i>
+            <div class="text-center mb-2">
+              <i class="bi bi-building-fill-add feature-icon px-3 py-2"></i>
+            </div>
             <h5 class="fw-bold">Partnerships</h5>
-            <p class="small">Working with clinics, labs and local leaders to improve screening and referral pathways.</p>
+            <p class="small fw-light">Working with clinics, labs and local leaders to improve screening and referral pathways.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team -->
+  <!-- Our Team  -->
   <section class="py-5 bg-body-secondary">
     <div class="container py-5">
-      <h2 class="display-6 fw-bold heading bbc-pink-text text-center mb-4">Meet Our Team</h2>
-      <p class="text-center lead-compact">A volunteer-led team of survivors, health professionals and community advocates driving change in Benue.</p>
-      <div class="row g-4 justify-content-center mt-4">
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="card h-100 border-0 shadow-sm text-center team-card p-3">
-            <img src="assets/img/Hannah Mngohol Tiohn.jpg" class="rounded-circle mx-auto" alt="Hannah" />
-            <div class="card-body">
-              <h5 class="fw-bold mb-0">Hannah Mngohol Tiohn</h5>
-              <small class="text-muted d-block mb-2">Chairperson</small>
-              <p class="small">Community leader and advocate for women's health.</p>
-            </div>
-          </div>
-        </div>
+      <h2 class="display-5 fw-bold heading bbc-pink-text text-center mb-2" data-aos="fade-up" data-aos-delay="100">Meet Our Team</h2>
+      <p class="lead text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+        Our dedicated team members have a shared commitment to supporting women affected by breast cancer across Benue State.
+      </p>
+      <div class="row g-4 justify-content-center">
+        <!-- Team Member 1 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 border-0 shadow-sm text-center team-card p-3">
-            <img src="assets/img/Scholastica Mnena Lan FPSN.jpg" class="rounded-circle mx-auto" alt="Scholastica" />
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="assets/img/Hannah Mngohol Tiohn.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 1" style="width:120px; height:120px; object-fit:cover;">
             <div class="card-body">
-              <h5 class="fw-bold mb-0">Scholastica M. Lan, FPSN</h5>
-              <small class="text-muted d-block mb-2">Secretary</small>
-              <p class="small">Public health professional coordinating outreach and training.</p>
+              <h5 class="card-title fw-bold mb-1">Hannah Mngohol Tiohn</h5>
+              <p class="card-text mb-2 bbc-pink-text fw-semibold">Chairperson</p>
+              <p class="card-text small">A passionate advocate for women's health, leading BBCSI with vision and compassion.</p>
             </div>
           </div>
         </div>
+        <!-- Team Member 2 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 border-0 shadow-sm text-center team-card p-3">
-            <img src="assets/img/Flourence Mbachaga.jpg" class="rounded-circle mx-auto" alt="Flourence" />
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="assets/img/Scholastica Mnena Lan FPSN.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 2" style="width:120px; height:120px; object-fit:cover;">
             <div class="card-body">
-              <h5 class="fw-bold mb-0">Flourence Mbachaga</h5>
-              <small class="text-muted d-block mb-2">Assistant Secretary</small>
-              <p class="small">Supports logistics and community engagement.</p>
+              <h5 class="card-title fw-bold mb-1">Scholastica M. Lan, FPSN</h5>
+              <p class="card-text mb-2 bbc-pink-text fw-semibold">Secretary</p>
+              <p class="card-text small">Keeps our mission organized and running smoothly, coordinating communication and documentation.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="assets/img/Flourence Mbachaga.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 3" style="width:120px; height:120px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-1">Flourence Mbachaga</h5>
+              <p class="card-text mb-2 bbc-pink-text fw-semibold">Assistant Secretary</p>
+              <p class="card-text small">Assists in organizing outreach and support activities, connecting women to vital resources.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="assets/img/Grace Erdoo Ateata.jpg" class="card-img-top rounded-circle mx-auto mt-4" alt="Team Member 4" style="width:120px; height:120px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-1">Grace Erdoo Ateata</h5>
+              <p class="card-text mb-2 bbc-pink-text fw-semibold">Treasurer</p>
+              <p class="card-text small">Manages donor and partner relations and ensures transparency in all financial matters.</p>
             </div>
           </div>
         </div>
@@ -194,18 +249,20 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-5 bg-white text-center">
-    <div class="container py-5"w>
-      <h3 class="fw-bold">Join Us</h3>
-      <p class="lead lead-compact">Volunteer, donate, or partner with BBCSI to expand lifesaving outreach across Benue State.</p>
-      <a href="get-involved.html" class="btn bbc-btn-pink btn-lg me-3">Get Involved</a>
-      <a href="donate.html" class="btn btn-outline-secondary btn-lg">Donate</a>
+  <section class="py-5 bg-black text-center">
+    <div class="container py-5">
+      <h1 class="fw-bold text-white">Join Us <span class="bbc-pink-text itali">Today</span></h1>
+      <p class="lead text-white">Volunteer, donate, or partner with BBCSI to expand lifesaving outreach across Benue State.</p>
+      <div class="text-center my-4">
+        <a href="get-involved.html" class="btn btn-lg bbc-pink-bg text-white me-3">Get Involved</a>
+        <a href="donate.html" class="btn btn-lg bg-white">Donate Now</a>
+      </div>
     </div>
   </section>
 
   <!-- Footer (same as index) -->
   <footer class="py-5 bbc-pink-text bg-body">
-    <hr>
+    <!-- <hr> -->
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
