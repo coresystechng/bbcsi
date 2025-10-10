@@ -136,26 +136,30 @@
           <div class="col-lg-6" data-aos="fade-left">
             <div class="bg-white p-4 rounded-4 shadow-sm">
               <form action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain">
-                <div class="row g-2">
-                  <div class="col-md-6">
-                    <label class="form-label">Full Name</label>
-                    <input class="form-control" name="Name" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" name="Email" required>
-                  </div>
-                </div>
-                <div class="mb-2 mt-2">
-                  <label class="form-label">Subject</label>
-                  <input class="form-control" name="Subject" placeholder="e.g., Volunteer enquiry, Partnership" required>
+                <div class="mb-3">
+                  <label for="name" class="form-label fw-semibold">Your Name</label>
+                  <input type="text" class="form-control" id="name" name="Name" required>
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Message</label>
-                  <textarea class="form-control" name="Message" rows="6" required></textarea>
+                  <label for="email" class="form-label fw-semibold">Your Email</label>
+                  <input type="email" class="form-control" id="email" name="Email" required>
                 </div>
-                <div class="d-grid my-4">
-                  <button type="submit" class="btn bbc-btn-pink">Send message</button>
+                <div class="mb-3">
+                  <label for="role" class="form-label fw-semibold">I am a...</label>
+                  <select class="form-select" id="role" name="Role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="Patients/Survivors">Patient/Survivor</option>
+                    <option value="Caregivers">Caregiver</option>
+                    <option value="Donors & Partners">Donor & Partner</option>
+                    <option value="Policymakers & Health Professionals">Policymaker & Health Professional</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label fw-semibold">Message</label>
+                  <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn bbc-btn-pink btn-lg fw-bold">Send Message</button>
                 </div>
               </form>
             </div>
@@ -167,49 +171,50 @@
 
   <!-- Footer -->
   <footer class="py-5 bbc-pink-text bg-body">
-    <!-- <hr> -->
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <img src="assets/img/bbc-logo-with-text.png" alt="BBCSI Logo" width="250" class="mb-2">
           <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old GRA, <br> Gboko, Benue State.</p>
-          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email:</b> Benuecancergroup@gmail.com</p>
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email: </b><a href="mailto:Benuecancergroup@gmail.com" target="_blank" class="text-muted">Benuecancergroup@gmail.com</a></p>
           <p class="mb-1 text-black-50"><b class="bbc-pink-text">Phone:</b> +234 703 301 1348 </p>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">About BBCSI</h6>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">What We Do</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">Meet the Team</a></li>
+            <li class="my-2"><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
+            <li class="my-2"><a href="programs.html" class="text-black-50 text-decoration-none">What We Do</a></li>
+            <li class="my-2"><a href="about.html#team" class="text-black-50 text-decoration-none">Meet the Team</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Resources</h6>
           <ul class="list-unstyled">
-            <li><a href="resources.html" class="text-black-50 text-decoration-none">FAQs</a></li>
-            <li><a href="resources.html" class="text-black-50 text-decoration-none">Resources</a></li>
-            <li><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+            <li class="my-2"><a href="blog.html" class="text-black-50 text-decoration-none">Blog</a></li>
+            <li class="my-2"><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+            <li class="my-2"><a href="resources.html" class="text-black-50 text-decoration-none">Facts & Myths</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Social Media</h6>
           <ul class="list-unstyled">
-            <li><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
-            <li><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
-            <li><a href="blog.html" class="text-black-50 text-decoration-none">Latest Blog</a></li>
+            <li class="my-2"><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
+            <li class="my-2"><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Legal</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-black-50 text-decoration-none">Terms of Use</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
+            <li class="my-2"><a href="terms.html" class="text-black-50 text-decoration-none">Terms of Use</a></li>
+            <li class="my-2"><a href="privacy.html" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
-      <div class="text-center pt-4 border-top border-light border-opacity-25 mt-4">
-        <small>&copy; 2025 Benue Breast Cancer Support Initiative. </small>
+      <div class="text-center pt-4 text-muted mt-4">
+          <small>&copy; <span id="year"></span> Benue Breast Cancer Support Initiative. </small>
+          <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+          </script>
       </div>
     </div>
   </footer>

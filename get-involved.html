@@ -330,49 +330,50 @@
 
   <!-- Footer -->
   <footer class="py-5 bbc-pink-text bg-body">
-    <!-- <hr> -->
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <img src="assets/img/bbc-logo-with-text.png" alt="BBCSI Logo" width="250" class="mb-2">
           <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old GRA, <br> Gboko, Benue State.</p>
-          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email:</b> Benuecancergroup@gmail.com</p>
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email: </b><a href="mailto:Benuecancergroup@gmail.com" target="_blank" class="text-muted">Benuecancergroup@gmail.com</a></p>
           <p class="mb-1 text-black-50"><b class="bbc-pink-text">Phone:</b> +234 703 301 1348 </p>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">About BBCSI</h6>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">What We Do</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">Meet the Team</a></li>
+            <li class="my-2"><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
+            <li class="my-2"><a href="programs.html" class="text-black-50 text-decoration-none">What We Do</a></li>
+            <li class="my-2"><a href="about.html#team" class="text-black-50 text-decoration-none">Meet the Team</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Resources</h6>
           <ul class="list-unstyled">
-            <li><a href="resources.html" class="text-black-50 text-decoration-none">FAQs</a></li>
-            <li><a href="resources.html" class="text-black-50 text-decoration-none">Resources</a></li>
-            <li><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+            <li class="my-2"><a href="blog.html" class="text-black-50 text-decoration-none">Blog</a></li>
+            <li class="my-2"><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+            <li class="my-2"><a href="resources.html" class="text-black-50 text-decoration-none">Facts & Myths</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Social Media</h6>
           <ul class="list-unstyled">
-            <li><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
-            <li><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
-            <li><a href="blog.html" class="text-black-50 text-decoration-none">Latest Blog</a></li>
+            <li class="my-2"><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
+            <li class="my-2"><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 mb-4">
+        <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Legal</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-black-50 text-decoration-none">Terms of Use</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
+            <li class="my-2"><a href="terms.html" class="text-black-50 text-decoration-none">Terms of Use</a></li>
+            <li class="my-2"><a href="privacy.html" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
-      <div class="text-center pt-4 border-top border-light border-opacity-25 mt-4">
-        <small>&copy; 2025 Benue Breast Cancer Support Initiative. </small>
+      <div class="text-center pt-4 text-muted mt-4">
+          <small>&copy; <span id="year"></span> Benue Breast Cancer Support Initiative. </small>
+          <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+          </script>
       </div>
     </div>
   </footer>
