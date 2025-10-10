@@ -24,13 +24,13 @@
       .bbc-pink-text { color: var(--bbc-pink) !important; }
       .bbc-btn-pink { background-color: var(--bbc-pink); border: 2px solid var(--bbc-pink); color: white; font-weight: 700; padding: 0.6rem 1.75rem; transition: all 0.25s ease; border-radius: 50px; }
       .bbc-btn-pink:hover { background-color: #c02b74; border-color: #c02b74; transform: translateY(-2px); }
-      .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/PHOTO-2022-10-22-11-10-31.jpg') center center/cover no-repeat; min-height: 90vh; color: white; display:flex; align-items:center; }
+      .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/outreach-1.png') center center/cover no-repeat; min-height: 100vh; color: white; display:flex; align-items:center; }
       .feature-icon { width:3rem; height:3rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
       .team-card img { width:110px; height:110px; object-fit:cover; }
       .lead-compact { max-width: 820px; margin:0 auto; }
     </style>
 </head>
-<body>
+<body class="bg-body-secondary">
 
   <!-- Header / Nav (same structure as index) -->
   <header>
@@ -44,13 +44,31 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 align-items-center">
-            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item mx-2"> <a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="resources.html">Resources</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
-            <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" aria-current="page"  href="contact.html">Contact Us</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
+                <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2"><a class="nav-link bbc-pink-text fw-semibold active" aria-current="page" href="contact.html">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
           </ul>
         </div>
@@ -59,86 +77,101 @@
   </header>
 
   <!-- Hero -->
-  <section class="contact-hero text-center">
+  <section class="hero-about text-center">
     <div class="container" data-aos="fade-up">
-      <h1 class="display-5 fw-bold heading">Contact BBCSI</h1>
+      <h1 class="display-5 fw-bold heading">Contact Us Today</h1>
       <p class="lead mt-2" style="max-width:820px; margin:0 auto;">Questions, partnership enquiries, volunteering or support requests — we're here to help. Reach out and we'll respond as soon as possible.</p>
     </div>
   </section>
 
-  <!-- Contact Details + Form -->
-  <main class="container py-5">
-    <div class="row g-4">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="bg-white p-4 rounded-4 shadow-sm">
-          <h3 class="fw-bold mb-3">Get in touch</h3>
-          <p class="mb-1"><strong class="bbc-pink-text">Email:</strong> <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a></p>
-          <p class="mb-1"><strong class="bbc-pink-text">Phone:</strong> +234 703 301 1348</p>
-          <p class="mb-3"><strong class="bbc-pink-text">Address:</strong><br>No. 6, Ako Yaweh Street, Old GRA, Gboko, Benue State</p>
-
-          <h5 class="fw-semibold">Office hours</h5>
-          <p class="mb-3 small">Mon — Fri: 9:00 AM — 4:00 PM<br>Closed on public holidays</p>
-
-          <h5 class="fw-semibold">Follow us</h5>
-          <div class="d-flex gap-3 mt-2">
-            <a class="text-decoration-none text-muted" href="#"><i class="bi bi-facebook fs-4"></i></a>
-            <a class="text-decoration-none text-muted" href="#"><i class="bi bi-youtube fs-4"></i></a>
-            <a class="text-decoration-none text-muted" href="#"><i class="bi bi-twitter fs-4"></i></a>
+  <main>
+    <!-- Contact Details  -->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container py-5">
+        <h2 class="display-6 fw-bold heading bbc-pink-text">Get In Touch</h2>
+        <p class="lead">We'd love to hear from you. Here's how you can reach us.</p>
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="card border-0 rounded-3 p-3 shadow-sm">
+              <div class="card-body">
+                <h4 class="fw-semibold mb-3 text-muted">Locate Us</h4>
+                <p class="mb-3"><strong class="bbc-pink-text">Address:</strong><br>No. 6, Ako Yaweh Street, Old GRA, Gboko, Benue State</p>
+                <strong class="bbc-pink-text">Office Hours:</strong><br>
+                <p class="mb-3">Mon — Fri: 9:00 AM — 4:00 PM<br>Closed on public holidays</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="card border-0 rounded-3 p-3 shadow-sm">
+              <div class="card-body">
+                <h4 class="fw-semibold mb-3 text-muted">Call/Email Us</h4>
+                <p class="mb-1"><strong class="bbc-pink-text">Email:</strong> <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com 
+                  <i class="bi bi-link-45deg"></i></a></p>
+                <p class="mb-1"><strong class="bbc-pink-text">Phone:</strong> +234 703 301 1348</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="card border-0 rounded-3 p-3 shadow-sm">
+              <div class="card-body">
+                <h4 class="fw-semibold mb-3 text-muted">Follow us</h4>
+                <div class="">
+                  <a class="text-decoration-none text-muted fs-6 d-block" href="#"><i class="bi bi-facebook bbc-pink-text me-2"></i>Facebook</a>
+                  <a class="text-decoration-none text-muted fs-6 d-block" href="#"><i class="bi bi-youtube bbc-pink-text me-2"></i>Youtube</a>
+                  <a class="text-decoration-none text-muted fs-6 d-block" href="#"><i class="bi bi-whatsapp bbc-pink-text me-2"></i>WhatsApp</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="mt-4 map-placeholder shadow-sm"></div>
-      </div>
-
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="bg-white p-4 rounded-4 shadow-sm">
-          <h3 class="fw-bold mb-3">Send us a message</h3>
-          <p class="small text-muted">Use this form for general enquiries, support requests, partnership proposals, or media enquiries.</p>
-          <form action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain">
-            <div class="row g-2">
-              <div class="col-md-6">
-                <label class="form-label">Your name</label>
-                <input class="form-control" name="Name" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Your email</label>
-                <input type="email" class="form-control" name="Email" required>
-              </div>
-            </div>
-            <div class="mb-2 mt-2">
-              <label class="form-label">Subject</label>
-              <input class="form-control" name="Subject" placeholder="e.g., Volunteer enquiry, Partnership" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" name="Message" rows="6" required></textarea>
-            </div>
-            <div class="d-flex gap-2">
-              <button type="submit" class="btn bbc-btn-pink">Send message</button>
-              <button type="reset" class="btn btn-outline-secondary">Reset</button>
-            </div>
-          </form>
-        </div>
-        <div class="mt-3">
-          <details class="bg-white p-3 rounded-3 shadow-sm">
-            <summary class="fw-semibold">Frequently asked</summary>
-            <ul class="mt-2 small mb-0">
-              <li>How can I join a support group? — Use the form and select ‘Volunteer’ or ‘Support’ in the subject.</li>
-              <li>Can BBCSI help with treatment costs? — We have a small loan program; enquiries should include diagnosis details and contact information.</li>
-              <li>How can my clinic partner with you? — Email us with the services you provide and proposed collaboration.</li>
-            </ul>
-          </details>
-        </div>
-      </div>
     </div>
+    </div>
+    </section>
+    <!-- Contact Form  -->
+    <section class="py-5 bg-body-secondary">
+      <div class="container py-5">
+        <h1 class="fw-bold mb-3 text-center bbc-pink-text heading">Send Us A Message</h1>
+        <p class="small text-muted lead text-center mb-4">Use this form for general enquiries, support requests, partnership proposals, or media enquiries.</p>
+        <div class="row g-4 d-flex justify-content-center">
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="bg-white p-4 rounded-4 shadow-sm">
+              <form action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain">
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <label class="form-label">Full Name</label>
+                    <input class="form-control" name="Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="Email" required>
+                  </div>
+                </div>
+                <div class="mb-2 mt-2">
+                  <label class="form-label">Subject</label>
+                  <input class="form-control" name="Subject" placeholder="e.g., Volunteer enquiry, Partnership" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" name="Message" rows="6" required></textarea>
+                </div>
+                <div class="d-grid my-4">
+                  <button type="submit" class="btn bbc-btn-pink">Send message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="py-5 bbc-pink-text bg-body">
-    <hr>
+    <!-- <hr> -->
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="assets/img/bbcsi_logo-p.png" alt="BBCSI Logo" width="65" class="mb-2">
+          <img src="assets/img/bbc-logo-with-text.png" alt="BBCSI Logo" width="250" class="mb-2">
           <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old GRA, <br> Gboko, Benue State.</p>
           <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email:</b> Benuecancergroup@gmail.com</p>
           <p class="mb-1 text-black-50"><b class="bbc-pink-text">Phone:</b> +234 703 301 1348 </p>
@@ -162,7 +195,7 @@
         <div class="col-lg-2 mb-4">
           <h6 class="fw-bold">Social Media</h6>
           <ul class="list-unstyled">
-             <li><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
+            <li><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
             <li><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
             <li><a href="blog.html" class="text-black-50 text-decoration-none">Latest Blog</a></li>
           </ul>
