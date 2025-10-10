@@ -54,12 +54,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 align-items-center">
-            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mx-2"><a class="nav-link active fw-bold bbc-pink-text" aria-current="page" href="about.html">About Us</a></li>
+            <li class="nav-item mx-2"> <a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle bbc-pink-text fw-semibold active" aria-current="page" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="resources.html">Resources</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
           </ul>
@@ -82,12 +91,12 @@
       <div class="row">
         <div class="col-md-6" data-aos="fade-up">
           <h2 class="display-6 fw-bold heading bbc-pink-text">Our Story</h2>
-          <p class="lead">BBCSI grew from conversations among survivors, caregivers and health workers who were tired of silence and harmful myths surrounding breast cancer. Since then, we have run awareness campaigns, screening drives, support groups and a small treatment loan program — all tailored to women living in Benue state.</p>
+          <p class="lead">Benue Breast Cancer Support Initiative (BBCSI) grew from conversations among survivors, caregivers and health workers who were tired of silence and harmful myths surrounding breast cancer. Since then, we have run awareness campaigns, screening drives, support groups and a small treatment loan program — all tailored to women living in Benue state.</p>
           <a href="" target="_blank" class="bbc-pink-text">Read Our Founder's Breast Cancer Story</a><i class="bi bi-link-45deg bbc-pink-text"></i>
           <br><br>
           <p class="lead">Too often, a diagnosis is hidden for fear of gossip, discrimination, or beliefs that breast cancer is caused by witchcraft or spiritual attacks. We offer education, support, and practical help so that no woman fights alone. Together, we can replace myths with understanding, and secrecy with strength.</p>
         </div>
-        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="ms-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <img src="assets/img/outreach-1.png" alt="" class="img-fluid w-100 rounded-2">
         </div>
       </div>
@@ -95,7 +104,7 @@
   </section>
 
   <!-- Mission / Vision / Values -->
-  <section id="mission" class="py-5 bg-white bg-body-secondary">
+  <section id="mission_vision" class="py-5 bg-white bg-body-secondary">
     <div class="container py-5">
       <div class="row g-4">
         <div class="col-md-6" data-aos="fade-up">
@@ -132,7 +141,7 @@
               <i class="bi bi-megaphone-fill feature-icon px-3 py-2"></i>
             </div>
             <h5 class="fw-bold">Awareness</h5>
-            <p class="small fw-light">Community talks, radio and church outreach to change beliefs and encourage screening.</p>
+            <p class="small fw-light">We host community talks, radio and church outreach to change beliefs and encourage screening.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
@@ -141,7 +150,7 @@
               <i class="bi bi-people-fill feature-icon px-3 py-2"></i>
             </div>
             <h5 class="fw-bold">Support Groups</h5>
-            <p class="small fw-light">Peer-led groups where patients and survivors share experiences and practical advice.</p>
+            <p class="small fw-light">We organize peer-led groups where patients and survivors share experiences and practical advice.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
@@ -150,7 +159,7 @@
               <i class="bi bi-cash-coin feature-icon px-3 py-2"></i>
             </div>
             <h5 class="fw-bold">Treatment Loans</h5>
-            <p class="small fw-light">Low-interest loans to help women complete prescribed treatment without financial interruption.</p>
+            <p class="small fw-light">We offer low interest long term loans designed to subsidize treatment completion for BBCSI members.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
@@ -159,7 +168,7 @@
               <i class="bi bi-building-fill-add feature-icon px-3 py-2"></i>
             </div>
             <h5 class="fw-bold">Partnerships</h5>
-            <p class="small fw-light">Working with clinics, labs and local leaders to improve screening and referral pathways.</p>
+            <p class="small fw-light">We partner with clinics, labs and local leaders to improve screening and referral pathways.</p>
           </div>
         </div>
       </div>
@@ -170,7 +179,7 @@
   </section>
 
   <!-- Our Team  -->
-  <section class="py-5 bg-body-secondary">
+  <section class="py-5 bg-body-secondary" id="team">
     <div class="container py-5">
       <h2 class="display-5 fw-bold heading bbc-pink-text text-center mb-2" data-aos="fade-up" data-aos-delay="100">Meet Our Team</h2>
       <p class="lead text-center mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -250,7 +259,7 @@
           <div class="card h-100 border-0 shadow-sm text-center">
             <img src="assets/img/ambassador.jpg" class="card-img w-100 object-fit-cover" alt="Team Member 4">
             <div class="card-body">
-              <h5 class="card-title fw-bold mb-1">Kareen Martins</h5>
+              <h5 class="card-title fw-bold mb-1">Karenhappuch Nguyilan Shamange</h5>
               <p class="card-text mb-2 bbc-pink-text fw-semibold">Ambassador</p>
                 <p class="card-text small">Champions BBCSI's mission in the community, raising awareness and inspiring others to join the fight against breast cancer.</p>
             </div>
@@ -303,7 +312,7 @@
           <h6 class="fw-bold">Social Media</h6>
           <ul class="list-unstyled">
             <li><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
-            <li><a href="#" class="text-black-50 text-decoration-none">Facebook</a></li>
+            <li><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
             <li><a href="blog.html" class="text-black-50 text-decoration-none">Latest Blog</a></li>
           </ul>
         </div>
