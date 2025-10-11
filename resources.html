@@ -24,13 +24,21 @@
       .bbc-pink-text { color: var(--bbc-pink) !important; }
       .bbc-btn-pink { background-color: var(--bbc-pink); border: 2px solid var(--bbc-pink); color: white; font-weight: 700; padding: 0.6rem 1.75rem; transition: all 0.25s ease; border-radius: 50px; }
       .bbc-btn-pink:hover { background-color: #c02b74; border-color: #c02b74; transform: translateY(-2px); }
-      .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/PHOTO-2022-10-22-11-10-31.jpg') center center/cover no-repeat; min-height: 90vh; color: white; display:flex; align-items:center; }
+      .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/self-test.jpg') center center/cover no-repeat; min-height: 80vh; color: white; display:flex; align-items:center; }
       .feature-icon { width:3rem; height:3rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
       .team-card img { width:110px; height:110px; object-fit:cover; }
       .lead-compact { max-width: 820px; margin:0 auto; }
+      .myth-card {
+            background-color: #fce4ec; /* Light pink for myth warnings */
+            border-left: 5px solid #E91E63;
+        }
+        .fact-card {
+            background-color: #e8f5e9; /* Light green for positive/truth */
+            border-left: 5px solid #4CAF50;
+        }
     </style>
 </head>
-<body>
+<body class="bg-body-tertiary">
 
   <!-- Header / Nav (same structure as index) -->
   <header>
@@ -44,12 +52,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 align-items-center">
-            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item mx-2"> <a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle bbc-pink-text fw-semibold active" aria-current="page" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item active bbc-pink-bg" href="resources.html">Resources</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
-            <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" aria-current="page" href="resources.html">Resources</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
+                <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
           </ul>
@@ -58,83 +84,185 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="py-5 text-center" style="margin-top:70px;">
-    <div class="container" data-aos="fade-up">
+    <!-- Hero -->
+  <section class="hero-about text-center">
+    <div class="container py-5" data-aos="fade-up">
       <h1 class="display-5 fw-bold heading">Resources</h1>
-      <p class="lead mt-2" style="max-width:820px; margin:0 auto;">Facts, downloadable materials, frequently asked questions and trusted links that help women and families in Benue understand breast cancer and access care.</p>
+      <p class="lead mt-3 lead-compact">Facts, downloadable materials, frequently asked questions and trusted links that help women and families in Benue understand breast cancer and access care.</p>
+      <a href="#resources" class="btn btn-lg px-4 bbc-btn-pink mt-3">Learn More</a>
     </div>
   </section>
 
-  <main class="container py-4">
-    <div class="row g-4">
-      <div class="col-lg-7" data-aos="fade-up">
-        <h3 class="fw-bold">Facts vs Myths</h3>
-        <p class="mb-3">Many people in our communities hold beliefs that delay care — below are clear, compassionate corrections you can share.</p>
-        <div class="mb-3">
-          <h5 class="fw-semibold">Myth: Breast cancer is a curse or caused by witchcraft.</h5>
-          <p class="mb-0">Fact: Breast cancer is a medical condition caused by uncontrolled cell growth. Early detection and treatment significantly improve outcomes.</p>
+  <main id="resources">
+    <!-- Myths & Facts -->
+    <section class="py-5 bg-light border-bottom">
+        <div class="container" data-aos="fade-down">
+            <h1 class="fw-bold heading bbc-pink-text">The Truth About Breast Cancer</h1>
+            <p class="lead">We dismantle the culture of silence by replacing dangerous folklore with life-saving medical facts. Knowledge is power, and early detection saves lives.</p>
         </div>
-        <div class="mb-3">
-          <h5 class="fw-semibold">Myth: Only older women get breast cancer.</h5>
-          <p class="mb-0">Fact: While risk increases with age, younger women can and do get breast cancer. Awareness and self-checks are important for all adults.</p>
+        <!-- Myths vs. Facts Section -->
+        <div class="container">
+            <div class="row g-5">
+                <!-- Column for MYTHS -->
+                <div class="col-lg-6 py-5">
+                    <h2 class="h3 fw-bold mb-4 text-danger" data-aos="fade-right">The Dangerous Myths</h2>
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Myth 1: Witchcraft/Spiritual Attack -->
+                        <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="100">
+                            <h4 class="h5 fw-bold text-danger">Myth: Cancer is caused by witchcraft or spiritual attacks.</h4>
+                            <p class="mb-0">This belief leads many to hide their illness or seek harmful traditional remedies, delaying real treatment until it is too late.</p>
+                        </div>
+                        <!-- Myth 2: Painless Lump is Safe -->
+                        <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="200">
+                            <h4 class="h5 fw-bold text-danger">Myth: A painless lump is harmless.</h4>
+                            <p class="mb-0">If a lump doesn't hurt, many women ignore it. However, most cancerous tumors are painless in the early stages.</p>
+                        </div>
+                        <!-- Myth 3: Diagnosis is Always Fatal -->
+                        <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="300">
+                            <h4 class="h5 fw-bold text-danger">Myth: A cancer diagnosis is a death sentence.</h4>
+                            <p class="mb-0">This fear causes despair and prevents women from seeking medical advice, resulting in late-stage diagnosis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column for FACTS -->
+                <div class="col-lg-6 py-5">
+                    <h2 class="h3 fw-bold mb-4 text-success" data-aos="fade-left">The Life-Saving Facts</h2>
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Fact 1: Medical Condition -->
+                        <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="100">
+                            <h4 class="h5 fw-bold text-success">Fact: Breast cancer is a medical condition.</h4>
+                            <p class="mb-0">It is caused by the uncontrolled growth of breast cells. It is treatable through medical interventions like surgery, chemotherapy, and radiation.</p>
+                        </div>
+                        <!-- Fact 2: Early Detection -->
+                        <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="200">
+                            <h4 class="h5 fw-bold text-success">Fact: Early detection dramatically increases survival rates.</h4>
+                            <p class="mb-0">When detected early, before it spreads, breast cancer has a high survival rate.Your self-exam can save your life!</p>
+                        </div>
+                        <!-- Fact 3: Treatment Works -->
+                        <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="300">
+                            <h4 class="h5 fw-bold text-success">Fact: Many women survive and thrive after treatment.</h4>
+                            <p class="mb-0">The stigma is wrong. You can be cured. BBCSI is here to help you get timely and affordable care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <h5 class="fw-semibold">Myth: Surgery spreads cancer.</h5>
-          <p class="mb-0">Fact: Surgery, when recommended, removes cancer and is a key part of treatment. It does not spread the disease.</p>
-        </div>
+    </section>
 
-        <hr>
+    <!-- FAQ Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="display-6 fw-bold text-center mb-5 bbc-pink-text" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="row g-4 d-flex justify-content-center">
+              <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="300">
+                    <!-- FAQ 1: How to Check for Lumps -->
+                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                How often should I check my breasts for lumps?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body fw-normal">
+                                <p>We strongly recommend <span class="bbc-pink-text fw-semibold"> performing a Breast Self-Exam (BSE) monthly.</span></p>
+                                <p> Get a clinical breast exam every 1–3 years.</p>
+                                <p>Perform the exam a few days after your period ends, when your breasts are least swollen or tender. If you are past menopause, choose the same day each month and schedule a mammogram every year if available.</p>
+                                <a href="#downloads" class="bbc-pink-text fw-bold">Download our step-by-step BSE Guide &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- FAQ 2: When to Start Screening -->
+                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                At what age should I start formal cancer screening?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body fw-normal">
+                                <p>For women in Benue State, we advise the following:</p>
+                                <ul>
+                                    <li><span class="bbc-pink-text fw-semibold">Age 20+: </span>Begin monthly Breast Self-Exams (BSE).</li>
+                                    <li><span class="bbc-pink-text fw-semibold">Age 40+: </span>Discuss regular Mammogram screening with your doctor, if the service is accessible to you.</li>
+                                </ul>
+                                <p class="mb-0">If you have a strong family history of breast cancer, please speak to a doctor sooner.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- FAQ 3: Found a Lump -->
+                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What do I do immediately if I find a lump?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body fw-normal">
+                                <p class="fw-semibold bbc-pink-text">Do NOT panic, and do NOT delay!</p>
+                                <ol>
+                                    <li><span class="bbc-pink-text fw-semibold">Contact BBCSI:</span> Reach out to our support email at <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a> for guidance and immediate emotional support.</li>
+                                    <li><span class="bbc-pink-text fw-semibold">See a Doctor: </span>Make an appointment to visit a primary health facility or specialist immediately for a proper diagnosis.</li>
+                                    <li><span class="bbc-pink-text fw-semibold">Bring a Loved One:</span> Take a trusted family member or friend with you.</li>
+                                </ol>
+                                <p class="mb-0">Remember: Finding a lump does not always mean cancer, but only a doctor can confirm it.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3 class="fw-bold mt-4">Frequently Asked Questions</h3>
-        <div class="accordion" id="faq">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">How do I check myself for breast changes?</button></h2>
-            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Look for lumps, changes in shape, skin dimpling, nipple discharge or changes. If you notice anything new, visit a clinic for evaluation.</div></div>
+                    <!-- FAQ 4: Is Breast Cancer Fatal? -->
+                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Is breast cancer always fatal?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body fw-normal">
+                              <p><span class="bbc-pink-text fw-semibold">No, Early detection saves lives.</span> When found early, breast cancer is highly treatable and many women live long, healthy lives.</p>
+                              <p class="mb-0">We are here to help. We provide support groups, awareness education, school and church outreach, and long-term treatment loans for members undergoing care.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Highlight -->
+    <section class="py-5 bg-dark">
+      <div class="container py-5 text-center" data-aos="zoom-in">
+        <h2 class="display-6 fw-bold bbc-pink-text mb-4">The Real Numbers Matter.</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="p-5 rounded-3 border bg-white shadow-lg">
+              <h3 class="h4 fw-bold mb-3">Disparity in Mortality</h3>
+              <p class="lead mb-0">Black women have a <strong class="bbc-pink-text fw-semibold">38% higher mortality rate</strong> from breast cancer compared to white women in the United States, a disparity often linked to late-stage diagnosis and barriers to access. Our work is aimed at closing this gap in Benue State.</p>
+            </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">Can BBCSI help with treatment costs?</button></h2>
-            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">We operate a small treatment loan program and provide referrals. Use our contact form or call +234 703 301 1348 to begin an application.</div></div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">Where can I get screened?</button></h2>
-            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">We partner with clinics across Benue for screening days. Check our Events page or email Benuecancergroup@gmail.com to find the next screening in your area.</div></div>
-          </div>
         </div>
-
-        <hr>
-
-        <h3 class="fw-bold mt-4">Downloads</h3>
-        <p class="small">Printable resources you can share in clinics, churches and markets.</p>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a class="text-decoration-none" href="assets/docs/bbcsi-web_content.pdf" target="_blank"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> BBCSI outreach booklet (PDF)</a></li>
-        </ul>
       </div>
+    </section>
 
-      <aside class="col-lg-5" data-aos="fade-left">
-        <div class="resource-card p-4 bg-white">
-          <h5 class="fw-bold">Need Support?</h5>
-          <p class="mb-1"><strong class="bbc-pink-text">Phone:</strong> +234 703 301 1348</p>
-          <p class="mb-1"><strong class="bbc-pink-text">Email:</strong> <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a></p>
-          <p class="small mb-0">For urgent support with access to treatment, call or message and one of our advocates will respond with next steps.</p>
-
-          <hr>
-
-          <h6 class="fw-semibold">Trusted links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#" class="text-decoration-none">National Cancer Control (Nigeria)</a></li>
-            <li><a href="#" class="text-decoration-none">WHO — Breast Cancer Information</a></li>
-            <li><a href="#" class="text-decoration-none">Local clinic partners</a></li>
-          </ul>
-
-          <hr>
-
-          <h6 class="fw-semibold">Share Our Materials</h6>
-          <p class="small">Download the outreach booklet and distribute at your church, market or workplace. If you need printed copies, email us to arrange a batch.</p>
-          <a href="assets/docs/bbcsi-web_content.pdf" class="btn bbc-btn-pink" target="_blank">Download PDF</a>
+    <!-- Downloads -->
+    <section class="py-5" class="downloads">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-7" data-aos="fade-up">
+            <h3 class="fw-bold mt-4">Downloads</h3>
+            <p class="small">Printable resources you can read more about breast cancer</p>
+            <!-- <p class="small">Printable resources you can share in clinics, churches and markets.</p> -->
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="text-decoration-none" href="https://www.cancer.org/content/dam/CRC/PDF/Public/8577.00.pdf" target="_blank"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Breast Cancer Booklet (PDF)</a></li>
+            </ul>
+          </div>
         </div>
-      </aside>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -190,309 +318,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>window.onload=function(){AOS.init({duration:1000,once:true});};</script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources & Education | BBCSI: Facts vs. Myths</title>
-    <!-- Load Bootstrap 5.3 CSS for responsive design -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Load AOS CSS for Scroll Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <!-- Custom Styles (Same as index.html for consistency) -->
-    <style>
-        :root {
-            --bbc-pink: #D63384; /* A bright, hopeful pink */
-            --bbc-secondary: #f8f9fa;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bbc-secondary);
-        }
-        .bbc-pink-bg {
-            background-color: var(--bbc-pink) !important;
-        }
-        .bbc-pink-text {
-            color: var(--bbc-pink) !important;
-        }
-        .bbc-btn-pink {
-            background-color: var(--bbc-pink);
-            border-color: var(--bbc-pink);
-            color: white;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-        }
-        .bbc-btn-pink:hover {
-            background-color: #c02b74; /* slightly darker pink */
-            border-color: #c02b74;
-            color: white;
-        }
-        .card-program {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 12px;
-            border: 1px solid #dee2e6;
-        }
-        .myth-card {
-            background-color: #fce4ec; /* Light pink for myth warnings */
-            border-left: 5px solid #E91E63;
-        }
-        .fact-card {
-            background-color: #e8f5e9; /* Light green for positive/truth */
-            border-left: 5px solid #4CAF50;
-        }
-        .accordion-button:not(.collapsed) {
-            color: var(--bs-white);
-            background-color: var(--bbc-pink);
-            box-shadow: none;
-        }
-        .accordion-button {
-            font-weight: 600;
-            border-radius: 8px !important;
-        }
-        .navbar-brand {
-            font-weight: 800;
-            font-size: 1.5rem;
-        }
-        /* Icon styling for programs */
-        .program-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- A. Header / Navigation (Consistent across pages) -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-            <div class="container">
-                <a class="navbar-brand bbc-pink-text" href="index.html">
-                    <span class="program-icon me-2" style="font-size: 1.8rem;">&#x1F380;</span> BBCSI
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">What We Do</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-bold bbc-pink-text" aria-current="page" href="resources.html">Resources</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Get Involved</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn bbc-btn-pink rounded-pill" href="#">DONATE NOW</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Page Header -->
-        <section class="py-5 bg-light border-bottom">
-            <div class="container" data-aos="fade-down">
-                <p class="text-uppercase bbc-pink-text fw-bold mb-1">Education & Empowerment</p>
-                <h1 class="display-4 fw-bold">Facts vs. Myths: The Truth About Breast Cancer</h1>
-                <p class="lead">We dismantle the culture of silence by replacing dangerous folklore with life-saving medical facts. Knowledge is power, and early detection saves lives.</p>
-            </div>
-        </section>
-
-        <!-- Myths vs. Facts Section -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <!-- Column for MYTHS -->
-                    <div class="col-lg-6">
-                        <h2 class="h3 fw-bold mb-4 text-danger text-uppercase" data-aos="fade-right">The Dangerous Myths</h2>
-                        <div class="d-flex flex-column gap-3">
-                            <!-- Myth 1: Witchcraft/Spiritual Attack -->
-                            <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="100">
-                                <h4 class="h5 fw-bold text-danger">Myth: Cancer is caused by witchcraft or spiritual attacks.</h4>
-                                <p class="mb-0">This belief leads many to hide their illness or seek harmful traditional remedies, delaying real treatment until it is too late.</p>
-                            </div>
-                            <!-- Myth 2: Painless Lump is Safe -->
-                            <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="200">
-                                <h4 class="h5 fw-bold text-danger">Myth: A painless lump is harmless.</h4>
-                                <p class="mb-0">If a lump doesn't hurt, many women ignore it. However, most cancerous tumors are painless in the early stages.</p>
-                            </div>
-                            <!-- Myth 3: Diagnosis is Always Fatal -->
-                            <div class="card p-3 myth-card shadow-sm" data-aos="fade-right" data-aos-delay="300">
-                                <h4 class="h5 fw-bold text-danger">Myth: A cancer diagnosis is a death sentence.</h4>
-                                <p class="mb-0">This fear causes despair and prevents women from seeking medical advice, resulting in late-stage diagnosis.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column for FACTS -->
-                    <div class="col-lg-6">
-                        <h2 class="h3 fw-bold mb-4 text-success text-uppercase" data-aos="fade-left">The Life-Saving Facts</h2>
-                        <div class="d-flex flex-column gap-3">
-                            <!-- Fact 1: Medical Condition -->
-                            <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="100">
-                                <h4 class="h5 fw-bold text-success">Fact: Breast cancer is a medical condition.</h4>
-                                <p class="mb-0">It is caused by the uncontrolled growth of breast cells. It is treatable through medical interventions like surgery, chemotherapy, and radiation.</p>
-                            </div>
-                            <!-- Fact 2: Early Detection -->
-                            <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="200">
-                                <h4 class="h5 fw-bold text-success">Fact: Early detection dramatically increases survival rates.</h4>
-                                <p class="mb-0">When detected early, before it spreads, breast cancer has a high survival rate. **Your self-exam can save your life!**</p>
-                            </div>
-                            <!-- Fact 3: Treatment Works -->
-                            <div class="card p-3 fact-card shadow-sm" data-aos="fade-left" data-aos-delay="300">
-                                <h4 class="h5 fw-bold text-success">Fact: Many women survive and thrive after treatment.</h4>
-                                <p class="mb-0">The stigma is wrong. You can be cured. BBCSI is here to help you get timely and affordable care.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section: Actionable Guidance -->
-        <section class="py-5 bg-white border-top">
-            <div class="container">
-                <h2 class="display-6 fw-bold text-center mb-5 bbc-pink-text" data-aos="fade-up">Frequently Asked Questions</h2>
-
-                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="300">
-                    <!-- FAQ 1: How to Check for Lumps -->
-                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                How often should I check my breasts for lumps?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <p class="fw-bold">We strongly recommend performing a **Breast Self-Exam (BSE) monthly**, starting from age 20.</p>
-                                <p>Perform the exam a few days after your period ends, when your breasts are least swollen or tender. If you are past menopause, choose the same day each month.</p>
-                                <a href="#" class="bbc-pink-text fw-bold">Download our step-by-step BSE Guide &rarr;</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2: When to Start Screening -->
-                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                At what age should I start formal cancer screening?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <p>For women in Benue State, we advise the following:</p>
-                                <ul>
-                                    <li>**Age 20+:** Begin monthly Breast Self-Exams (BSE).</li>
-                                    <li>**Age 40+:** Discuss regular Mammogram screening with your doctor, if the service is accessible to you.</li>
-                                </ul>
-                                <p class="mb-0">If you have a strong family history of breast cancer, please speak to a doctor sooner.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3: Found a Lump -->
-                    <div class="accordion-item rounded-3 mb-3 shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                What do I do immediately if I find a lump?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <p class="fw-bold text-danger">Do NOT panic, and do NOT delay!</p>
-                                <ol>
-                                    <li>**Contact BBCSI:** Reach out to our support email at <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a> for guidance and immediate emotional support.</li>
-                                    <li>**See a Doctor:** Make an appointment to visit a primary health facility or specialist immediately for a proper diagnosis.</li>
-                                    <li>**Bring a Loved One:** Take a trusted family member or friend with you.</li>
-                                </ol>
-                                <p class="mb-0">Remember: Finding a lump does not always mean cancer, but only a doctor can confirm it.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        
-        <!-- Statistics Highlight -->
-        <section class="py-5">
-            <div class="container text-center" data-aos="zoom-in">
-                <h2 class="display-6 fw-bold bbc-pink-text mb-4">The Real Numbers Matter.</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                         <div class="p-4 rounded-3 border bg-white shadow-lg">
-                            <h3 class="h4 fw-bold text-danger mb-3">Disparity in Mortality</h3>
-                            <p class="lead mb-0">Black women have a **38% higher mortality rate** from breast cancer compared to white women in the United States, a disparity often linked to late-stage diagnosis and barriers to access. Our work is aimed at closing this gap in Benue State.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- G. Footer (Consistent across pages) -->
-    <footer class="py-5 bbc-pink-bg text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="fw-bold">BBCSI</h5>
-                    <p>Benue Breast Cancer Support Initiative. From Silence to Strength.</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-white me-3">&#x1F4F1;</a> <!-- Placeholder for Social Icons -->
-                        <a href="#" class="text-white me-3">&#x1F4F7;</a>
-                        <a href="#" class="text-white">&#x1F4AC;</a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-2">
-                    <h5 class="fw-bold">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Our History</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Our Programs</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Latest Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <h5 class="fw-bold">Support</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="resources.html" class="text-white text-decoration-none">FAQs</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h5 class="fw-bold">Contact Support</h5>
-                    <p class="mb-1">Email: <a href="mailto:Benuecancergroup@gmail.com" class="text-white text-decoration-none">Benuecancergroup@gmail.com</a></p>
-                    <p class="mb-1">Address: [Physical Location Placeholder]</p>
-                </div>
-            </div>
-            <div class="text-center pt-4 border-top border-light border-opacity-25 mt-4">
-                <small>&copy; 2025 Benue Breast Cancer Support Initiative. </small>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS (Animate On Scroll)
-        window.onload = function() {
-            AOS.init({
-                duration: 1200, // duration of the animation in ms
-                once: true,     // whether animation should only happen once - on scroll down
-            });
-        };
-    </script>
 </body>
 </html>
