@@ -3,67 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Blog - Benue Breast Cancer Support Initiative</title>
+    <title>Blog | Breast Cancer Support Initiative</title>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/bbcsi_logo.jpg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Load Bootstrap 5.3 CSS for responsive design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Load AOS CSS for Scroll Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Font: Marko One -->
     <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+    <!-- Google Font: Funnel Dispaly -->
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Custom Styles -->
     <style>
-      :root {
-        --bbc-pink: #da2968;
-        --bbc-pink-light: #fce4ec;
-        --bbc-secondary: #B9B7C0;
-        --bbc-dark-text: #555457;
-      }
-      .heading { font-family: 'Marko One', sans-serif; }
-      body { background-color: var(--bbc-secondary); color: var(--bbc-dark-text); }
-      body, .content { font-family: 'Funnel Display', sans-serif; font-weight: 500; }
-      .bbc-pink-bg { background-color: var(--bbc-pink) !important; }
-      .bbc-pink-text { color: var(--bbc-pink) !important; }
-      .bbc-btn-pink { background-color: var(--bbc-pink); border: 2px solid var(--bbc-pink); color: white; font-weight: 700; padding: 0.6rem 1.75rem; transition: all 0.25s ease; border-radius: 50px; }
-      .bbc-btn-pink:hover { background-color: #c02b74; border-color: #c02b74; transform: translateY(-2px); }
-      .hero-about { background: linear-gradient(rgba(218,41,104,0.55), rgba(19,16,17,0.45)), url('assets/img/PHOTO-2022-10-22-11-10-31.jpg') center center/cover no-repeat; min-height: 90vh; color: white; display:flex; align-items:center; }
-      .feature-icon { width:3rem; height:3rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
-      .team-card img { width:110px; height:110px; object-fit:cover; }
-      .lead-compact { max-width: 820px; margin:0 auto; }
+    :root {
+      --bbc-pink: #da2968; /* A bright, hopeful pink */
+      --bbc-pink-light: #fce4ec; /* Very light pink background */
+      --bbc-secondary: #B9B7C0; /* Off-white for section breaks */
+      --bbc-dark-text: #555457;
+    }
+    .heading {
+      font-family: 'Marko One', sans-serif;
+    }
+
+    body {
+      background-color: var(--bbc-secondary);
+      color: var(--bbc-dark-text);
+    }
+      
+    body, .content {
+      font-family: 'Funnel Display', sans-serif;
+      font-weight: 500;
+    }
+
+    .bbc-pink-bg {
+      background-color: var(--bbc-pink) !important;
+    }
+    .bbc-pink-text {
+      color: var(--bbc-pink) !important;
+    }
+    /* Refined Primary Button Style */
+    .bbc-btn-pink {
+      background-color: var(--bbc-pink);
+      border: 2px solid var(--bbc-pink);
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 2.5rem;
+      transition: all 0.3s ease;
+      border-radius: 50px; /* Highly rounded pill shape */
+      box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+    }
+    .bbc-btn-pink:hover {
+      background-color: #c02b74; 
+      border-color: #c02b74;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(214, 51, 132, 0.6);
+    }
+    /* Secondary Outline Button Style */
+    .btn-outline-light {
+        border: 2px solid white;
+        color: white;
+        font-weight: 700;
+        border-radius: 50px;
+    }
+    .btn-outline-light:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-color: white;
+    }
+    .hero-section {
+        /* Better placeholder image */
+        background: linear-gradient(rgba(214, 51, 132, 0.6), rgba(19, 16, 17, 0.6)), url('assets/img/african-women.jpg') center center/cover no-repeat;
+        min-height: 90vh;
+        color: white;
+        padding: 8rem 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .myth-section {
+        /* Better placeholder image */
+        background: url('assets/img/2148959216.jpg') center center/cover no-repeat;
+        min-height: 80vh;
+        padding: 8rem 0;
+    }
+    .card-program {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        border: none; /* Removing default border */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    }
+    .card-program:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(29, 27, 28, 0.2); /* Pinker, more noticeable hover shadow */
+        border-color: var(--bbc-pink);
+    }
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.6rem;
+    }
+      /* Icon styling for programs */
+    .program-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    /* Ensure navigation links are bold and clear */
+  .navbar-nav .nav-link {
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+  .navbar-nav .nav-link:hover {
+      color: var(--bbc-pink) !important;
+    }
+
+    .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: #da2968;
+      color: #fff;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .featured-post {
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .featured-post h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .featured-post p {
+      color: #bdbdbd;
+      font-size: 1rem;
+    }
+
+    .card {
+      background-color: #2c2f33;
+      border: none;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card small {
+      color: #9aa0a6;
+    }
+
+    .text-category {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ddd;
+      font-size: 1rem;
+    }
     </style>
 </head>
 <body>
 
-  <!-- Header / Nav (same structure as index) -->
+  <!-- Header / Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-      <div class="container">
+      <div class="container flex justify-content-between">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/img/bbcsi_logo.jpg" alt="BBCSI" width="60" class="img-fluid">
+            <img src="assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 align-items-center">
-            <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-bold bbc-pink-text" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="resources.html">Resources</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-            <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" aria-current="page" href="blog.html">Blog</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
+                <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+              </ul>
+            </li>
             <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="get-involved.html#donate">DONATE NOW</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main class='container py-5'>
-    <div class="container py-5">
-      <h1 class='text-primary mb-4'>Blog</h1>
-      <article>
-        <h2>Founder’s Story</h2>
-        <p>From support group to NGO.</p>
-      </article>
+
+  <main class="bg-body-secondary py-5">
+      <div class="container py-5">
+
+    <!-- Featured Post -->
+    <div class="featured-post alert alert-warning border-2" data-aos="fade-up">
+      <h5 class="fw-bold mb-1">Upcoming: BBCSI Awareness Campaign 2025</h5>
+      <p class="mb-2 text-danger">Join our awareness walk on <strong>18 October 2025</strong> at <strong>Christ the King Catholic Church, Vandeikya</strong>. 
+        <br> <br>
+        <a href="blog_awareness_2025.html" class="fw-bold">See event details &rarr;</a>
+      </p>
+    </div>
+
+    <!-- Two smaller posts -->
+    <div class="row g-4">
+
+      <!-- Right Card -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card d-flex flex-row h-100 bg-body-tertiary">
+          <div class="card-body">
+            <div class="text-category bbc-pink-bg rounded-pill d-inline-block py-1 px-3 small">Event</div>
+            <h4 class="card-title text-dark-emphasis">BBCSI Awareness Campaign 2025</h4>
+            <small>Oct 11, 2025</small>
+            <p class="mt-2 text-muted">Join the 2025 awareness walk on 18 October at Christ the King Catholic Church, Vandeikya — together we can save lives.</p>
+            <a href="blog_awareness_2025.html" class="bbc-pink-text">Continue reading <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="thumbnail w-100 p-0 m-0" style="background: url('assets/img/outreach-3.png'); object-fit: contain; object-position: center;">
+            <!-- <img src="assets/img/outreach-1.png" alt="Founder" class="img-fluid w-100 object-fit-fill"> -->
+          </div>
+        </div>
+      </div>
+      <!-- Right Card -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card d-flex flex-row h-100 bg-body-tertiary">
+          <div class="card-body">
+            <div class="text-category bbc-pink-bg rounded-pill d-inline-block py-1 px-3 small">Story</div>
+            <h4 class="card-title text-dark-emphasis">Our Founder's Story: From Survivor to Advocator.</h4>
+            <small>Oct 10, 2025</small>
+            <p class="mt-2 text-muted">How a support group of 12 grew into BBCSI — Prof. Stevina's journey from survivor to founder.</p>
+            <a href="founder_story.html" class="bbc-pink-text">Continue reading <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="thumbnail w-100 p-0 m-0">
+            <img src="assets/img/founder.jpg" alt="Founder" class="img-thumbnail p-0 rounded-0">
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
   <!-- Footer -->
