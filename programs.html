@@ -93,92 +93,168 @@
         <a href="#programs" class="btn bbc-btn-pink mt-3">Learn More</a>
       </div>
     </section>
-    <!-- Our Programs -->
     <section class="bg-white py-5" data-aos="fade-up" id="programs">
       <div class="container py-5">
         <h1 class="fw-bold bbc-pink-text heading">Core Programs</h1>
         <p class="mb-5 lead">Tap each card to learn more.</p>
         <div class="row g-4">
+
+          <!-- Support Groups & Survivorship -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-            <div class="card h-100 border-0 shadow-sm card-program">
+            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#supportModal" style="cursor:pointer;">
               <img src="assets/img/support-group.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-people-fill"></i></span></div>
                 <div class="py-2">
                   <h5 class="small fw-bold">Support Groups & Survivorship</h5>
-                  <!-- <p class="small lead mb-2">We provide emotional support, practical advice and a safe space to share experiences. We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p> -->
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Awareness & Community Outreach -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100 border-0 shadow-sm card-program">
+            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#awarenessModal" style="cursor:pointer;">
               <img src="assets/img/community-outreach.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-megaphone-fill"></i></span></div>
                 <div class="py-2">
                   <h5 class="small fw-bold">Awareness & Community Outreach</h5>
-                  <!-- <p class="small lead mb-2">Church and market talks, radio segments in local languages, and school programs that teach signs of breast cancer and the importance of early presentation.</p> -->
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Low-Interest Treatment Loans Support -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-            <div class="card h-100 border-0 shadow-sm card-program">
-              <img src="assets//img/patient-support.jpg" alt="" class="card-img object-fit-contain w-100">
+            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#loanModal" style="cursor:pointer;">
+              <img src="assets/img/health-partnership.jpg" alt="" class="card-img object-fit-contain w-100">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-cash-coin"></i></span></div>
                 <div class="py-2">
                   <h5 class="small fw-bold">Low-Interest Treatment Loans Support</h5>
-                  <!-- <p class="mb-2 small lead">Low-interest loans to help members complete prescribed treatment without financial interruption. Contact us for more info.</p> -->
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Partnerships With Health Facilities -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100 border-0 shadow-sm card-program">
-              <img src="assets/img/health-partnership.jpg" class="card-img object-fit-contain w-100" alt="">
+            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#partnershipModal" style="cursor:pointer;">
+              <img src="assets/img/partnership.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-building-fill-add"></i></span></div>
                 <div class="py-2">
                   <h5 class="small fw-bold">Partnerships With Health Facilities</h5>
-                  <!-- <p class="mb-2 small lead">We work with hospitals and local leaders to increase screening access, strengthen referral pathways and train health workers in patient-centred care.</p> -->
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
+    <!-- ===================== MODALS ===================== -->
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bbc-pink-bg text-white">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-lg-3">
+            <div class="p-2 p-lg-5">
+              <img src="assets/img/support-group.jpg" alt="" class="img-fluid rounded-4">
+              <h5 class="modal-title bbc-pink-text mt-2 fw-bold" id="supportModalLabel">Support Groups & Survivorship</h5>
+              <p class="small fw-light mb-2 mt-2">We provide emotional support, practical advice and a safe space to share experiences. We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awareness Modal -->
+    <div class="modal fade" id="awarenessModal" tabindex="-1" aria-labelledby="awarenessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bbc-pink-bg text-white">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-lg-3">
+            <div class="p-2 p-lg-5">
+              <img src="assets/img/community-outreach.jpg" alt="" class="img-fluid rounded-4">
+              <h5 class="modal-title bbc-pink-text mt-2 fw-bold" id="supportModalLabel">Awareness & Community Outreach</h5>
+              <p class="small fw-light mb-2 mt-2">Church and market talks, radio segments in local languages, and school programs that teach signs of breast cancer and the importance of early presentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loan Modal -->
+    <div class="modal fade" id="loanModal" tabindex="-1" aria-labelledby="loanModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bbc-pink-bg text-white">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-lg-3">
+            <div class="p-2 p-lg-5">
+              <img src="assets/img/health-partnership.jpg" alt="" class="img-fluid rounded-4">
+              <h5 class="modal-title bbc-pink-text mt-2 fw-bold" id="supportModalLabel">Low-Interest Treatment Loans Support</h5>
+              <p class="small fw-light mb-2 mt-2">Low-interest loans to help members complete prescribed treatment without financial interruption. Contact us&nbsp;for&nbsp;more&nbsp;info.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partnership Modal -->
+    <div class="modal fade" id="partnershipModal" tabindex="-1" aria-labelledby="partnershipModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bbc-pink-bg text-white">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-lg-3">
+            <div class="p-2 p-lg-5">
+              <img src="assets/img/partnership.jpg" alt="" class="img-fluid rounded-4">
+              <h5 class="modal-title bbc-pink-text mt-2 fw-bold" id="supportModalLabel">Partnerships With Health Facilities</h5>
+              <p class="small fw-light mb-2 mt-2">We work with hospitals and local leaders to increase screening access, strengthen referral pathways and train health workers in patient-centred care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- ===================== END MODALS ===================== -->
     <!-- Impact & Results -->
     <section class="bg-body-tertiary py-5" data-aos="fade-up">
       <div class="container py-5 text-center">
         <h1 class="fw-bold bbc-pink-text heading">Impact & Results</h1>
         <p class="lead mb-5">We track program outcomes to ensure resources help real people.</p>
         <div class="row g-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <div class="col-6">
+          <div class="col-md-6">
               <div class="card border-0 h-100 shadow-sm text-center p-5">
                   <div class="display-4 fw-bold bbc-pink-text mb-2">2,000+</div>
                   <p class="mb-0 fw-light">people reached through outreach programs</p>
               </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
               <div class="card border-0 h-100 shadow-sm text-center p-5">
                   <div class="display-4 fw-bold bbc-pink-text mb-2">150+</div>
                   <p class="mb-0 fw-light">women supported with counselling</p>
               </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
               <div class="card border-0 h-100 shadow-sm text-center p-5">
                   <div class="display-4 fw-bold bbc-pink-text mb-2">10+</div>
                   <p class="mb-0 fw-light">treatment loans provided to date</p>
               </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
               <div class="card border-0 h-100 shadow-sm text-center p-5">
                   <div class="display-4 fw-bold bbc-pink-text mb-2">5+</div>
                   <p class="mb-0 fw-light">health facility partnership</p>
@@ -192,7 +268,7 @@
     <section class="py-5 bg-body" id="success-stories">
       <div class="container py-5">
         <h2 class="display-6 fw-bold heading bbc-pink-text text-center mb-4" data-aos="fade-up">Success Stories</h2>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center g-4">
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card h-100 border-0 bbc-pink-bg text-white shadow-sm text-center">
               <div class="card-body p-4">
