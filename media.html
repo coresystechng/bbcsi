@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media | Benue Breast Cancer Support Initiative</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/bbcsi_logo.jpg" type="image/x-icon">
+  <!-- Load Bootstrap 5.3 CSS for responsive design -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Load AOS CSS for Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Font: Marko One -->
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+  <!-- Google Font: Funnel Dispaly -->
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Custom Styles -->
+  <style>
+          :root {
+        --bbc-pink: #da2968; /* A bright, hopeful pink */
+        --bbc-pink-light: #fce4ec; /* Very light pink background */
+        --bbc-secondary: #B9B7C0; /* Off-white for section breaks */
+        --bbc-dark-text: #555457;
+      }
+
+      body {
+        background-color: var(--bbc-secondary);
+        color: var(--bbc-dark-text);
+      }
+        
+      body, .content {
+        font-family: 'Funnel Display', sans-serif;
+        font-weight: 500;
+      }
+
+      .bbc-pink-bg {
+        background-color: var(--bbc-pink) !important;
+      }
+      .bbc-pink-text {
+        color: var(--bbc-pink) !important;
+      }
+      /* Refined Primary Button Style */
+      .bbc-btn-pink {
+        background-color: var(--bbc-pink);
+        border: 2px solid var(--bbc-pink);
+        color: white;
+        font-weight: 700;
+        padding: 0.75rem 2.5rem;
+        transition: all 0.3s ease;
+        border-radius: 50px; /* Highly rounded pill shape */
+        box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+      }
+      .bbc-btn-pink:hover {
+        background-color: #c02b74; 
+        border-color: #c02b74;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(214, 51, 132, 0.6);
+      }
+      /* Secondary Outline Button Style */
+      .btn-outline-light {
+          border: 2px solid white;
+          color: white;
+          font-weight: 700;
+          border-radius: 50px;
+      }
+      .btn-outline-light:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: white;
+          border-color: white;
+      }
+
+      .hero-section {
+      /* Better placeholder image */
+      background: linear-gradient(rgba(214, 51, 132, 0.6), rgba(19, 16, 17, 0.6)), url('assets/img/camera.jpg') center center/cover no-repeat;
+      min-height:70vh;
+      color: white;
+      padding: 8rem 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+    .heading {
+    font-family: 'Marko One', sans-serif;
+    }
+
+    /* Gallery Grid */
+    .gallery-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-img:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-img:hover {
+      box-shadow: 0 10px 25px rgba(218, 41, 104, 0.25);
+    }
+
+    /* Fullscreen Material Box */
+    #materialBox {
+      position: fixed;
+      display: none;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 2000;
+    }
+    #materialBox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    #materialBox p {
+      color: #fff;
+      margin-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Navigation arrows */
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.3s ease;
+    }
+    .nav-arrow:hover {
+      opacity: 0.7;
+    }
+    .nav-left { left: 40px; }
+    .nav-right { right: 40px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Nav (same structure as index) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/bbcsi_logo.jpg" alt="BBCSI" width="60" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 align-items-center">
+            <li class="nav-item mx-2"> <a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle bbc-pink-text fw-semibold active" aria-current="page" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item active bbc-pink-bg" href="resources.html">Resources</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
+                <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
+                <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="donate.html">DONATE NOW</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header -->
+  <header class="hero-section d-flex align-items-center text-center">
+    <div class="container py-5" data-aos="fade-up">
+      <h1 class="display-5 fw-bold heading">Media</h1>
+      <p class="lead mt-3 lead-compact">See our organization's activities via pictures and videos</p>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <main class="py-5 bg-light">
+    <div class="container py-5">
+      <div class="row g-4" id="gallery">
+
+        <!-- Gallery Items -->
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in">
+          <div class="gallery-img" onclick="openMaterialBox(0)">
+            <img src="assets/img/bbcsi-group-1.jpg" alt="Awareness walk in Gboko community">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-img" onclick="openMaterialBox(1)">
+            <img src="assets/img/founder-with-nurses.jpg" alt="BBCSI members during a sensitization program">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-img" onclick="openMaterialBox(2)">
+            <img src="assets/img/outreach-1.png" alt="Free screening event for women">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-img" onclick="openMaterialBox(3)">
+            <img src="assets/img/outreach_5.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-img" onclick="openMaterialBox(4)">
+            <img src="assets/img/outreach-3.png" alt="BBCSI health partnership launch">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-img" onclick="openMaterialBox(4)">
+            <img src="assets/img/outreach-4.png" alt="BBCSI health partnership launch">
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_6.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach-2.png" alt="Survivor support group meeting">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/founder-in-russia.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_7.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_8.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_8.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_9.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_10.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_11.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_12.png" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_13.png" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/outreach_14.png" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Fullscreen Material Box -->
+  <div id="materialBox" onclick="closeMaterialBox()">
+    <span class="nav-arrow nav-left" onclick="prevImage(event)"><i class="bi bi-chevron-left"></i></span>
+    <span class="nav-arrow nav-right" onclick="nextImage(event)"><i class="bi bi-chevron-right"></i></span>
+    <img src="" alt="Fullscreen Image">
+    <p id="materialCaption"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bbc-pink-text bg-body">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="assets/img/bbc-logo-with-text.png" alt="BBCSI Logo" width="250" class="mb-2">
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old GRA, <br> Gboko, Benue State.</p>
+          <p class="mb-1 text-black-50"> <b class="bbc-pink-text">Email: </b><a href="mailto:Benuecancergroup@gmail.com" target="_blank" class="text-muted">Benuecancergroup@gmail.com</a></p>
+          <p class="mb-1 text-black-50"><b class="bbc-pink-text">Phone:</b> +234 703 301 1348 </p>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-">
+          <h6 class="fw-bold">About BBCSI</h6>
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
+            <li class="my-2"><a href="programs.html" class="text-black-50 text-decoration-none">What We Do</a></li>
+            <li class="my-2"><a href="about.html#team" class="text-black-50 text-decoration-none">Meet the Team</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-">
+          <h6 class="fw-bold">Resources</h6>
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="blog.html" class="text-black-50 text-decoration-none">Blog</a></li>
+            <li class="my-2"><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
+            <li class="my-2"><a href="resources.html" class="text-black-50 text-decoration-none">Facts & Myths</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-">
+          <h6 class="fw-bold">Social Media</h6>
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="https://www.youtube.com/@benuebreastcancersupport" target="_blank" class="text-black-50 text-decoration-none">YouTube</a></li>
+            <li class="my-2"><a href="https://www.facebook.com/groups/236359759171185/" target="_blank" class="text-black-50 text-decoration-none">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-">
+          <h6 class="fw-bold">Legal</h6>
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="terms.html" class="text-black-50 text-decoration-none">Terms of Use</a></li>
+            <li class="my-2"><a href="privacy.html" class="text-black-50 text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-4 text-muted mt-4">
+          <small>&copy; <span id="year"></span> Benue Breast Cancer Support Initiative. </small>
+          <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+          </script>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+  <!-- Bootstrap + AOS + Custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+
+    // Gallery logic
+    const materialBox = document.getElementById('materialBox');
+    const materialImg = materialBox.querySelector('img');
+    const materialCaption = document.getElementById('materialCaption');
+    const galleryImages = [...document.querySelectorAll('#gallery img')];
+    let currentIndex = 0;
+
+    function openMaterialBox(index) {
+      currentIndex = index;
+      const img = galleryImages[index];
+      materialImg.src = img.src;
+      materialCaption.textContent = img.alt;
+      materialBox.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent scroll while open
+    }
+
+    function closeMaterialBox() {
+      materialBox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function nextImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      openMaterialBox(currentIndex);
+    }
+
+    function prevImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      openMaterialBox(currentIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (materialBox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') nextImage(e);
+        if (e.key === 'ArrowLeft') prevImage(e);
+        if (e.key === 'Escape') closeMaterialBox();
+      }
+    });
+  </script>
+</body>
+</html>
