@@ -168,7 +168,7 @@
         <div class="row g-4 d-flex justify-content-center">
           <div class="col-lg-6" data-aos="fade-left">
             <div class="bg-white p-4 rounded-4 shadow-sm">
-              <form action="mailto:Benuecancergroup@gmail.com" method="post" enctype="text/plain">
+              <form action="contact_process.php" method="POST">
                 <div class="mb-3">
                   <label for="name" class="form-label fw-semibold">Your Name</label>
                   <input type="text" class="form-control" id="name" name="Name" required>
@@ -190,6 +190,11 @@
                 <div class="mb-3">
                   <label for="message" class="form-label fw-semibold">Message</label>
                   <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                </div>
+                <!-- Honeypot Field (hidden from users) -->
+                <div style="display:none;">
+                  <label for="website">Do not fill this field</label>
+                  <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                 </div>
                 <div class="d-grid">
                   <button type="submit" class="btn bbc-btn-pink btn-lg fw-bold">Send Message</button>
