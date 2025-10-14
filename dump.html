@@ -1,259 +1,216 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="shortcut icon" href="assets/img/bbcsi_logo.jpg" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <style>
-     .image-container-1 {
-        position: relative;
-        background: url('assets/img/2151516432.jpg') center center/cover no-repeat; min-height: 70vh;
-        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
-      }
-      .image-container-2 {
-        position: relative;
-        background: url('assets/img/2147663845.jpg') center center/cover no-repeat; min-height: 70vh;
-        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
-      }
-      .image-container-3 {
-        position: relative;
-        background: url('assets/img/2149117861.jpg') center center/cover no-repeat; min-height: 70vh;
-        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
-      }
-      .image-container-4 {
-        position: relative;
-        background: url('assets/img/2149351983.jpg') center center/cover no-repeat; min-height: 70vh;
-        overflow: hidden; /* ensures blur doesn’t go outside image bounds */
-      }
-
-      .blur-overlay-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 40%; /* controls how much of the left side is blurred */
-        height: 100%;
-        backdrop-filter: blur(8px);
-        background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0) 100%
-        rgba(0, 0, 0, 0.1) 60%,
-        rgba(0, 0, 0, 0.3) 20%,
-        rgba(0, 0, 0, 0.5) 0%,
-        );
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-      }
-      .blur-overlay-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 40%; /* controls how much of the left side is blurred */
-        height: 100%;
-        backdrop-filter: blur(8px);
-        background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.3) 40%,
-        rgba(0, 0, 0, 0.1) 80%,
-        rgba(0, 0, 0, 0) 100%
-        );
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      /* Mobile adjustments */
-      @media (max-width: 768px) {
-        .blur-overlay-left, .blur-overlay-right {
-          width: 100%;
-          height: 20%;
-          top: auto;
-          bottom: 0;
-          background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.7) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          text-align: center;
-          align-items: center;
-          justify-content: center;
-          padding: 1.5rem;
-        }
-      }
-
-      .blur-overlay h4 {
-        font-size: clamp(1.2rem, 2vw, 2rem);
-      }
-
-      .blur-overlay p {
-        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-        opacity: 0.9;
-      }
-  </style>
-</head>
-<body>
-  <div class="image-container-1">
-      <img src="assets/img/2148959218.jpg" class="" alt="Sample Image">
-      <div class="blur-overlay-left">
-        <div class="mx-5">
-          <h1 class="fw-bold mb-2 display-6 bbc-pink-text">Support Groups & Survivorship</h1>
-          <p class="">Peer-led groups provide emotional support, practical advice and a safe space to share experiences. <br> We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p>
-        </div>
-      </div>
-    </div>
-    <div class="image-container-2">
-      <div class="blur-overlay-right">
-        <div>
-          <h1 class="fw-bold mb-2 display-5 bbc-pink-text">Support Groups & Survivorship</h1>
-          <p class="lead display-6 lh-sm text-lg-start">Peer-led groups provide emotional support, practical advice and a safe space to share experiences. <br> We run monthly meetings in Gboko and outreach branches in neighbouring LGAs.</p>
-        </div>
-      </div>
-    </div>
-    <div class="image-container-3">
-      <div class="blur-overlay-left">
-        <div>
-          <h4 class="fw-bold mb-2">Blurred Left Side</h4>
-          <p class="mb-0">You can add your text or logo here</p>
-        </div>
-      </div>
-    </div>
-    <div class="image-container-4">
-      <div class="blur-overlay-right">
-        <div>
-          <h4 class="fw-bold mb-2">Blurred Left Side</h4>
-          <p class="mb-0">You can add your text or logo here</p>
-        </div>
-      </div>
-    </div>
-</body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>window.onload=function(){AOS.init({duration:1000,once:true});};</script>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Section Parallax | BBCSI</title>
+  <title>Gallery | Benue Breast Cancer Support Initiative</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bbc-pink: #da2968;
+      --bbc-dark: #333;
+    }
+    body {
+      font-family: 'Funnel Display', sans-serif;
+      background-color: #f8f9fa;
+      color: var(--bbc-dark);
+    }
+    .heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--bbc-pink);
     }
 
-    /* Reusable parallax base */
-    .parallax {
-      min-height: 80vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    /* Gallery Grid */
+    .gallery-img {
       position: relative;
-      display: flex;
-      align-items: center;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-img:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-img:hover {
+      box-shadow: 0 10px 25px rgba(218, 41, 104, 0.25);
+    }
+
+    /* Fullscreen Material Box */
+    #materialBox {
+      position: fixed;
+      display: none;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.9);
       justify-content: center;
-      color: white;
+      align-items: center;
+      flex-direction: column;
+      z-index: 2000;
+    }
+    #materialBox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    #materialBox p {
+      color: #fff;
+      margin-top: 1rem;
+      font-size: 1rem;
       text-align: center;
     }
 
-    /* Optional dark overlay */
-    .parallax::before {
-      content: "";
+    /* Navigation arrows */
+    .nav-arrow {
       position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.3s ease;
     }
-
-    .parallax .container {
-      position: relative;
-      z-index: 1;
+    .nav-arrow:hover {
+      opacity: 0.7;
     }
-
-    /* Give each section its own background */
-    .parallax-1 { background-image: url('assets/img/african-women-1.jpg'); }
-    .parallax-2 { background-image: url('assets/img/african-women-3.jpg'); }
-    .parallax-3 { background-image: url('assets/img/african-women.jpg'); }
-
-    /* Content section (normal scroll) */
-    .content-section {
-      background-color: #fff;
-      padding: 5rem 0;
-      color: #333;
-    }
-
-    /* Disable parallax on mobile */
-    @media (max-width: 768px) {
-      .parallax {
-        background-attachment: scroll;
-      }
-    }
+    .nav-left { left: 40px; }
+    .nav-right { right: 40px; }
   </style>
 </head>
 <body>
 
-  <!-- Section 1 -->
-  <section class="parallax parallax-1">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Raising Awareness</h1>
-      <p class="lead">Creating breast cancer awareness through community outreach programs.</p>
-      <a href="#programs" class="btn btn-lg" style="background-color: var(--bbc-pink); color: #fff;">Learn More</a>
+  <!-- Header -->
+  <header class="text-center py-5 bg-white shadow-sm">
+    <div class="container" data-aos="fade-down">
+      <h1 class="heading mb-2">Our Gallery</h1>
+      <p class="lead text-muted mb-0">Moments of hope, courage, and community — captured through our journey.</p>
     </div>
-  </section>
+  </header>
 
-  <!-- Normal Content -->
-  <section class="content-section">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-4" style="color: var(--bbc-pink);">Empowering Women</h2>
-      <p class="lead text-center mx-auto" style="max-width: 750px;">
-        We organize educational programs, training, and emotional support for women battling breast cancer. 
-        Through BBCSI, survivors share their experiences and empower others to live courageously.
-      </p>
+  <!-- Gallery Section -->
+  <main class="py-5 bg-light">
+    <div class="container py-5">
+      <div class="row g-4" id="gallery">
+
+        <!-- Gallery Items -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+          <div class="gallery-img" onclick="openMaterialBox(0)">
+            <img src="assets/img/african-women.jpg" alt="Awareness walk in Gboko community">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-img" onclick="openMaterialBox(1)">
+            <img src="assets/img/african-women-1.jpg" alt="BBCSI members during a sensitization program">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-img" onclick="openMaterialBox(2)">
+            <img src="assets/img/african-women-3.jpg" alt="Free screening event for women">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-img" onclick="openMaterialBox(3)">
+            <img src="assets/img/self-test.jpg" alt="Survivor support group meeting">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-img" onclick="openMaterialBox(4)">
+            <img src="assets/img/2148959216.jpg" alt="BBCSI health partnership launch">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+          <div class="gallery-img" onclick="openMaterialBox(5)">
+            <img src="assets/img/black-executive-analyst-finalizes-financial-report-reviews-data.jpg" alt="BBCSI outreach team volunteers">
+          </div>
+        </div>
+
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Section 2 -->
-  <section class="parallax parallax-2">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Support & Survivorship</h1>
-      <p class="lead">Providing emotional and financial support to patients during treatment and recovery.</p>
-    </div>
-  </section>
+  <!-- Fullscreen Material Box -->
+  <div id="materialBox" onclick="closeMaterialBox()">
+    <span class="nav-arrow nav-left" onclick="prevImage(event)"><i class="bi bi-chevron-left"></i></span>
+    <span class="nav-arrow nav-right" onclick="nextImage(event)"><i class="bi bi-chevron-right"></i></span>
+    <img src="" alt="Fullscreen Image">
+    <p id="materialCaption"></p>
+  </div>
 
-  <!-- More Normal Content -->
-  <section class="content-section">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-4" style="color: var(--bbc-pink);">Community Outreach</h2>
-      <p class="lead text-center mx-auto" style="max-width: 750px;">
-        Our outreach programs bring health education to rural communities, breaking myths and promoting early detection.
-      </p>
-    </div>
-  </section>
+  <!-- Footer -->
+  <footer class="py-4 bg-white text-center border-top">
+    <p class="mb-0 text-muted small">&copy; 2025 Benue Breast Cancer Support Initiative. All rights reserved.</p>
+  </footer>
 
-  <!-- Section 3 -->
-  <section class="parallax parallax-3">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Partnerships With Health Facilities</h1>
-      <p class="lead">Collaborating with hospitals to expand access to screening and treatment.</p>
-    </div>
-  </section>
-
+  <!-- Bootstrap + AOS + Custom JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+
+    // Gallery logic
+    const materialBox = document.getElementById('materialBox');
+    const materialImg = materialBox.querySelector('img');
+    const materialCaption = document.getElementById('materialCaption');
+    const galleryImages = [...document.querySelectorAll('#gallery img')];
+    let currentIndex = 0;
+
+    function openMaterialBox(index) {
+      currentIndex = index;
+      const img = galleryImages[index];
+      materialImg.src = img.src;
+      materialCaption.textContent = img.alt;
+      materialBox.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent scroll while open
+    }
+
+    function closeMaterialBox() {
+      materialBox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function nextImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      openMaterialBox(currentIndex);
+    }
+
+    function prevImage(e) {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      openMaterialBox(currentIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (materialBox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') nextImage(e);
+        if (e.key === 'ArrowLeft') prevImage(e);
+        if (e.key === 'Escape') closeMaterialBox();
+      }
+    });
+  </script>
 </body>
 </html>
