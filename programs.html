@@ -25,7 +25,7 @@
       .bbc-btn-pink { background-color: var(--bbc-pink); border: 2px solid var(--bbc-pink); color: white; font-weight: 700; padding: 0.6rem 1.75rem; transition: all 0.25s ease; border-radius: 50px; }
       .bbc-btn-pink:hover { background-color: #c02b74; border-color: #c02b74; transform: translateY(-2px); }
       .hero-about { background: linear-gradient(#0303038c, #530d2473), url('assets/img/unnamed-1.jpg') center center/cover no-repeat; min-height: 80vh; color: white; display:flex; align-items:center; }
-      .feature-icon { width:3rem; height:3rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+      .feature-icon { width:2rem; height:2rem; background-color:#da2968; color:#fff; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
       .team-card img { width:110px; height:110px; object-fit:cover; }
       .lead-compact { max-width: 820px; margin:0 auto; }
       .card-program {
@@ -37,6 +37,54 @@
         box-shadow: 0 10px 25px #6b294a33; /* Pinker, more noticeable hover shadow */
         border-color: var(--bbc-pink);
       }
+
+    /* Reusable parallax base */
+    .parallax {
+      min-height:60vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    /* Optional dark overlay */
+    .parallax::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .parallax .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Give each section its own background */
+    .parallax-1 { background-image: url('assets/img/support-group.jpg'); }
+    .parallax-2 { background-image: url('assets/img/community-outreach.jpg'); }
+    .parallax-3 { background-image: url('assets/img/health-partnership.jpg'); }
+    .parallax-4 { background-image: url('assets/img/partnership.jpg'); }
+
+    /* Content section (normal scroll) */
+    .content-section {
+      background-color: #fff;
+      padding: 5rem 0;
+      color: #333;
+    }
+
+    /* Disable parallax on mobile */
+    @media (max-width: 768px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+    }
     </style>
 </head>
 <body>
@@ -93,15 +141,17 @@
         <a href="#programs" class="btn bbc-btn-pink mt-3">Learn More</a>
       </div>
     </section>
+    <!-- CTA Programs -->
     <section class="bg-white py-5" data-aos="fade-up" id="programs">
       <div class="container py-5">
         <h1 class="fw-bold bbc-pink-text heading">Core Programs</h1>
-        <p class="mb-5 lead">Tap each card to learn more.</p>
+        <p class="mb-5 lead">Tap each card to learn more about the programs we offer.</p>
         <div class="row g-4">
 
           <!-- Support Groups & Survivorship -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#supportModal" style="cursor:pointer;">
+            <a href="#support-group" class="text-decoration-none text-reset">
+            <div class="card h-100 border-0 shadow-sm card-program" style="cursor:pointer;">
               <img src="assets/img/support-group.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-people-fill"></i></span></div>
@@ -110,11 +160,13 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
 
           <!-- Awareness & Community Outreach -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#awarenessModal" style="cursor:pointer;">
+            <a href="#awareness" class="text-decoration-none text-reset">
+            <div class="card h-100 border-0 shadow-sm card-program" style="cursor:pointer;">
               <img src="assets/img/community-outreach.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-megaphone-fill"></i></span></div>
@@ -123,24 +175,28 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
 
           <!-- Low-Interest Treatment Loans Support -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#loanModal" style="cursor:pointer;">
+            <a href="#treatment-loans" class="text-decoration-none text-reset">
+            <div class="card h-100 border-0 shadow-sm card-program" style="cursor:pointer;">
               <img src="assets/img/health-partnership.jpg" alt="" class="card-img object-fit-contain w-100">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-cash-coin"></i></span></div>
                 <div class="py-2">
-                  <h5 class="small fw-bold">Low-Interest Treatment Loans Support</h5>
+                  <h5 class="small fw-bold">Low-Interest Treatment Loans</h5>
                 </div>
               </div>
             </div>
+            </a>
           </div>
 
           <!-- Partnerships With Health Facilities -->
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100 border-0 shadow-sm card-program" data-bs-toggle="modal" data-bs-target="#partnershipModal" style="cursor:pointer;">
+            <a href="#partnership" class="text-decoration-none text-reset">
+            <div class="card h-100 border-0 shadow-sm card-program" style="cursor:pointer;">
               <img src="assets/img/partnership.jpg" class="card-img object-fit-contain w-100" alt="">
               <div class="card-body d-flex align-items-start">
                 <div class="me-3"><span class="feature-icon"><i class="bi bi-building-fill-add"></i></span></div>
@@ -149,16 +205,87 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
 
         </div>
       </div>
     </section>
 
+      <!-- Parallax 1: Support Groups -->
+  <section class="parallax parallax-1" id="support-group">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Support Groups & Survivorship</h1>
+      <p class="small">A safe, welcoming space for women to share experiences and find strength together.</p>
+    </div>
+  </section>
+  
+  <!-- Content: Support Groups -->
+  <section class="content-section">
+    <div class="container">
+      <p class="lead">Support groups are known to be powerful tools for emotional healing and empowerment. They create safe, confidential environments for individuals facing similar challenges such as cancer patients, survivors, or caregivers. Members can share experiences, fears, and coping strategies. The sense of belonging that develops within these groups reduces feelings of isolation and stigma, helping participants build resilience and hope.</p>
+      <br>
+      <p class="lead">At BBCSI our WhatsApp platform is a day-to-day safe environment where members bring their vulnerabilities and are sure of a warm embrace. Our WhatsApp platform serves as an informal learning environment. Through regular information sharing, members gain access to health education, stress management techniques, and updates on treatment or recovery options as well as tips on exercise and nutrition. Breaking health news enriches discussions and enhances members’ confidence to make informed health decisions. Our welfare committee and zonal coordinators are mandated to perform member check ins and share updates on the platform. Member milestones including birthdays, treatment anniversaries or number of years post diagnoses are also celebrated.  </p>
+    </div>
+  </section>
+
+  <!-- Parallax 2: Awareness -->
+  <section class="parallax parallax-2" id="awareness">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Awareness and Community Outreach</h1>
+      <p class="small">Our outreach programs bring health education to rural communities, breaking myths and promoting early detection.</p>
+    </div>
+  </section>
+
+  <!-- Content: Awareness -->
+  <section class="content-section">
+    <div class="container">
+      <p class="lead">For BBCSI, awareness and outreach programs are essential for addressing the culture of secrecy surrounding breast cancer and promoting early detection. By bringing accurate information to the community especially in public spaces like churches, schools, markets, and local gatherings, BBCSI continues to challenge myths and misconceptions that often delay diagnosis or treatment. These activities raise visibility, normalize conversations about health, and motivate individuals to seek medical help early. Except for 2020 and 2021 as a result of the COVID pandemic, BBCSI has visited a different local government in Benue State since our first campaign in 2016. We have also hosted online discussions with experts in the field every October since 2020.</p>
+      <p class="lead">We have also hosted online discussions with experts in the field every October since 2020.
+      Effective outreach is most impactful when it reflects local culture and values. During outreaches to women in local settings, local languages, community influencers such as chiefs and Local Government officials and other partners for health like the Medical Women help messages resonate more deeply. Incorporating educational materials, and testimonies from survivors also transform our awareness campaigns into life-saving interventions. These activities build community trust, and position BBCSI as a reliable source of health education and advocacy. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Parallaz 3: Treatment Loans -->
+  <section class="parallax parallax-3" id="treatment-loans">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Low-Interest Treatment Loans</h1>
+      <p class="small">Low-interest, long-term loans for members actively undergoing treatment, easing the financial burden.</p>
+    </div>
+  </section>
+
+    <!-- Content: Treatment Loans -->
+  <section class="content-section">
+    <div class="container">
+      <p class="lead">Many patients and survivors struggle financially due to high treatment costs and low to no income. Offering low-interest long term loans empowers beneficiaries to continue with their treatment. These loans support ongoing medical care which would otherwise have been unavailable to the beneficiaries.</p>
+      <p class="lead">When combined with an honors system that encourages beneficiaries to repay so others can be assisted, the impact of our long-term treatment loan program multiplies. Beneficiaries gain financial assistance and confidence as well as dignity. This approach transforms what we do as a health-focused nonprofit like BBCSI into a catalyst for community resilience and addressing the economic realities that often accompany illness and survival.
+      </p>
+    </div>
+  </section>
+
+  <!-- Parallaz 4: Partnership -->
+  <section class="parallax parallax-4" id="partnership">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Partnerships with Health Facilities</h1>
+      <p class="small">Collaboration with hospitals and local leaders to expand screening access and strengthen support networks.</p>
+    </div>
+  </section>
+
+    <!-- Content: Partnership -->
+  <section class="content-section">
+    <div class="container">
+      <p class="lead">BBCSI collaborates with clinics, hospitals, and primary healthcare facilities to ensure that beneficiaries have access to timely and quality medical services. Some of our partners include Dr. Atuna’s clinic in Gboko the Nigerian Cancer Health Fund (CHF) which provides financial support for low-income persons to reduce out of pocket expenses for cancer treatment. When members need referrals, to the regional center of CHF in the North Central located at the National Hospital in Abuja, we provide them with a referral letter that introduces them to the CHF. We also partner with the Oncology departments at both the Federal Medical Centre (FMC) in Makurdi and the Benue State University Teaching Hospital (BSUTH)</p>
+      <p class="lead">Joint initiatives, such as health screenings conducted in collaboration with Amor Initiatives, can extend care to rural or underserved communities. Such collaborations build credibility, reduce duplication of efforts, and create an integrated support system that bridges community-based care with formal healthcare services and ultimately improving outcomes for all.
+      </p>
+    </div>
+  </section>
+
+
     <!-- ===================== MODALS ===================== -->
 
     <!-- Support Modal -->
-    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bbc-pink-bg text-white">
@@ -173,10 +300,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Awareness Modal -->
-    <div class="modal fade" id="awarenessModal" tabindex="-1" aria-labelledby="awarenessModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="awarenessModal" tabindex="-1" aria-labelledby="awarenessModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bbc-pink-bg text-white">
@@ -191,10 +318,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Loan Modal -->
-    <div class="modal fade" id="loanModal" tabindex="-1" aria-labelledby="loanModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="loanModal" tabindex="-1" aria-labelledby="loanModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bbc-pink-bg text-white">
@@ -209,10 +336,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Partnership Modal -->
-    <div class="modal fade" id="partnershipModal" tabindex="-1" aria-labelledby="partnershipModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="partnershipModal" tabindex="-1" aria-labelledby="partnershipModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bbc-pink-bg text-white">
@@ -227,11 +354,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 <!-- ===================== END MODALS ===================== -->
     <!-- Impact & Results -->
-    <section class="bg-body-tertiary py-5" data-aos="fade-up">
+    <section class="bg-secondary-subtle py-5" data-aos="fade-up">
       <div class="container py-5 text-center">
         <h1 class="fw-bold bbc-pink-text heading">Impact & Results</h1>
         <p class="lead mb-5">We track program outcomes to ensure resources help real people.</p>
