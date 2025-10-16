@@ -86,7 +86,16 @@
         transition: all 0.3s ease;
         border-radius: 50px; /* Highly rounded pill shape */
         box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+      } 
+
+      .card {
+        transition: all 0.5s ease;
       }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(214, 51, 132, 0.6);
+      }
+
       .bbc-btn-pink:hover {
         background-color: #c02b74; 
         border-color: #c02b74;
@@ -242,10 +251,10 @@
                 <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
                 <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
                 <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
-                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li><a class="dropdown-item" href="media.html">Gallery</a></li>
                 <li><a class="dropdown-item" href="resources.html">Resources</a></li>
               </ul>
-            </li>
+            </li> 
             <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
             <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -257,6 +266,7 @@
                 <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
               </ul>
             </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="get-involved.html#donate">DONATE NOW</a></li>
           </ul>
@@ -323,7 +333,7 @@
         <div class="col-md-6">
           <div class="card card-involve text-white">
             <img src="assets/img/support-group.jpg" class="card-img" alt="Moon">
-            <div class="card-img-overlay d-flex flex-column justify-content-between ms-3">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
               <h5 class="card-title mt-auto d-flex">
                 <div class="icon-badge me-2">
                   <i class="bi bi-people-fill"></i>
@@ -340,7 +350,7 @@
         <div class="col-md-6">
           <div class="card card-involve text-white">
             <img src="assets/img/community-outreach.jpg" class="card-img" alt="Moon">
-            <div class="card-img-overlay d-flex flex-column justify-content-between ms-3">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
               <h5 class="card-title mt-auto d-flex">
                 <div class="icon-badge me-2">
                   <i class="bi bi-megaphone-fill"></i>
@@ -356,7 +366,7 @@
         <div class="col-md-6">
           <div class="card card-involve text-white">
             <img src="assets/img/health-partnership.jpg" class="card-img" alt="Moon">
-            <div class="card-img-overlay d-flex flex-column justify-content-between ms-3">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
               <h5 class="card-title mt-auto d-flex">
                 <div class="icon-badge me-2">
                   <i class="bi bi-cash-coin"></i>
@@ -372,7 +382,7 @@
         <div class="col-md-6">
           <div class="card card-involve text-white">
             <img src="assets/img/partnership.jpg" class="card-img" alt="Moon">
-            <div class="card-img-overlay d-flex flex-column justify-content-between ms-3">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
               <h5 class="card-title mt-auto d-flex">
                 <div class="icon-badge me-2">
                   <i class="bi bi-building-fill"></i>
@@ -625,8 +635,9 @@
         <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">About BBCSI</h6>
           <ul class="list-unstyled">
+            <li class="my-2"><a href="our_history.html" class="text-black-50 text-decoration-none">Our History</a></li>
             <li class="my-2"><a href="about.html" class="text-black-50 text-decoration-none">Who We Are</a></li>
-            <li class="my-2"><a href="programs.html" class="text-black-50 text-decoration-none">What We Do</a></li>
+            <li class="my-2"><a href="programs.html#programs" class="text-black-50 text-decoration-none">What We Do</a></li>
             <li class="my-2"><a href="about.html#team" class="text-black-50 text-decoration-none">Meet the Team</a></li>
           </ul>
         </div>
@@ -634,8 +645,9 @@
           <h6 class="fw-bold">Resources</h6>
           <ul class="list-unstyled">
             <li class="my-2"><a href="blog.html" class="text-black-50 text-decoration-none">Blog</a></li>
-            <li class="my-2"><a href="get-involved.html" class="text-black-50 text-decoration-none">Get Involved</a></li>
-            <li class="my-2"><a href="resources.html" class="text-black-50 text-decoration-none">Facts & Myths</a></li>
+            <li class="my-2"><a href="media.html" class="text-black-50 text-decoration-none">Gallery</a></li>
+            <li class="my-2"><a href="resources.html#downloads" class="text-black-50 text-decoration-none">Downloads</a></li>
+            <li class="my-2"><a href="resources.html#facts&myths" class="text-black-50 text-decoration-none">Facts & Myths</a></li>
           </ul>
         </div>
         <div class="col-lg-2 mb-4 mb-lg-">
