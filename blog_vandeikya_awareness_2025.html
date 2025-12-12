@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BBCSI Takes Cancer Awareness Campaign to Vandeikya | BBCSI</title>
+    <meta
+      name="description"
+      content="BBCSI brings breast cancer awareness campaign to Vandeikya LGA, emphasizing that cancer is no longer a death sentence with early detection and proper treatment."
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/bbcsi_logo.jpg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Font: Marko One -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font: Funnel Display -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <style>
+      :root {
+        --bbc-pink: #da2968;
+        --bbc-secondary: #b9b7c0;
+        --bbc-dark-text: #555457;
+      }
+      body {
+        background: var(--bbc-secondary);
+        color: var(--bbc-dark-text);
+        font-family: "Funnel Display", sans-serif;
+      }
+      .heading {
+        font-family: "Marko One", sans-serif;
+      }
+      .bbc-btn-pink {
+        background: var(--bbc-pink);
+        border: 2px solid var(--bbc-pink);
+        color: #fff;
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-weight: 700;
+      }
+      .bbc-pink-bg {
+        background-color: var(--bbc-pink) !important;
+      }
+      .bbc-pink-text {
+        color: var(--bbc-pink) !important;
+      }
+      .bbc-btn-pink {
+        background-color: var(--bbc-pink);
+        border: 2px solid var(--bbc-pink);
+        color: white;
+        font-weight: 700;
+        padding: 0.75rem 2.5rem;
+        transition: all 0.3s ease;
+        border-radius: 50px;
+        box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+      }
+      .bbc-btn-pink:hover {
+        background-color: #c02b74;
+        border-color: #c02b74;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(214, 51, 132, 0.6);
+      }
+      .author-img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .pull-quote {
+        border-left: 4px solid var(--bbc-pink);
+        padding-left: 1rem;
+        font-style: italic;
+        color: #333;
+      }
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .highlight-box {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-left: 4px solid var(--bbc-pink);
+      }
+      .speaker-card {
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .speaker-card h6 {
+        margin-bottom: 10px;
+      }
+      blockquote {
+        background: linear-gradient(135deg, #fdf2f8 0%, #fff 100%);
+        border-left: 4px solid var(--bbc-pink);
+        padding: 20px 25px;
+        margin: 25px 0;
+        border-radius: 0 12px 12px 0;
+        font-style: italic;
+      }
+      blockquote footer {
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 10px;
+        color: var(--bbc-pink);
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-F4DL8H378V"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-F4DL8H378V");
+  </script>
+  <body class="bg-body-secondary">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container flex justify-content-between">
+          <a class="navbar-brand" href="index.html">
+              <img src="assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 align-items-center">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                  <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
+                  <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
+                  <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
+                  <li><a class="dropdown-item" href="media.html">Gallery</a></li>
+                  <li><a class="dropdown-item active bbc-pink-bg" href="blog.html">Blog</a></li>
+                  <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
+              <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Get Involved
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
+                  <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
+                  <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
+                  <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" href="blog.html" aria-current="page">Blog</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
+              <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="get-involved.html#donate">DONATE NOW</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main style="margin-top: 90px" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+          <div class="mb-4">
+            <span class="badge bbc-pink-bg mb-3">Cancer Awareness</span>
+            <h1 class="display-6 fw-bold heading bbc-pink-text">
+              BBCSI Takes Cancer Awareness Campaign to Vandeikya
+            </h1>
+            <p class="lead text-muted fst-italic">
+              "Cancer Is No Longer a Death Sentence"
+            </p>
+            <p class="text-muted small my-4">
+              <i class="bi bi-calendar3 me-2"></i>Published: 3 November 2025 ·
+              <i class="bi bi-person me-2 ms-2"></i>Author: Mr. Terpase Jeiyol,
+              Media Aide to the Chairman, BBCSI
+            </p>
+          </div>
+          <figure class="mb-4">
+            <img
+              src="assets/img/outreach_19.jpg"
+              class="img-fluid rounded-3"
+              alt=" Community members receiving vital information during the awareness session"
+            />
+            <figcaption class="small fw-lighter mt-2 fst-italic">
+             Community members receiving vital information during the awareness session 
+            </figcaption>
+          </figure>
+
+          <section class="fs-6">
+            <p class="lead">
+              The Benue Breast Cancer Support Initiative (BBCSI), a Benue State
+              based NGO whose major aim is to enlighten the public on how the
+              scourge can be taken care of from the moment it is detected in
+              one's body to living as a survivor, took their enlightenment
+              campaign to Vandeikya, the headquarters of Vandeikya LGA,
+              recently.
+            </p>
+
+            <h5 class="mt-5 bbc-pink-text">
+              <i class="bi bi-mic-fill me-2"></i>Founder's Message: Breaking the
+              Culture of Silence
+            </h5>
+            <p>
+              Speaking at Christ the King Church where the awareness campaign
+              was held, the founder of BBCSI,
+              <strong>Professor (Emerita) Stevina Evuleocha-Ugbah</strong>
+              stressed that the programme was meant to save lives as it breaks
+              the culture of silence surrounding breast cancer, dispels myths
+              and encourages men and women to take charge of their health.
+            </p>
+
+            <blockquote>
+              "Together, the narrative in our communities can be changed from
+              fear to hope."
+              <footer>
+                — Professor (Emerita) Stevina Evuleocha-Ugbah, Founder, BBCSI
+              </footer>
+            </blockquote>
+
+            <p>
+              Professor Evuleocha-Ugbah said, by sharing information on breast
+              cancer, the hope of early detection, healing and a future where no
+              woman faces breast cancer alone is assured. The US trained and
+              based Professor of Marketing and Entrepreneurship appreciated
+              volunteers, partners, health professionals and survivors who
+              continue to inspire the NGO with their courage to participate in
+              the enlightenment campaigns.
+            </p>
+
+            <p>
+              She also called on them to remain united in purpose by spreading
+              the knowledge, supporting those in need and standing firm in love
+              and solidarity. The founder, who was represented by the
+              Chairperson of BBCSI, <strong>Mrs. Mngohol Tion</strong>, thanked
+              Christ the King Church, Vandeikya LGC Chairman, the Ter Kunav and
+              donors for supporting their work and making the event possible.
+            </p>
+
+            <figure class="my-4">
+              <img
+                src="assets/img/outreach_17.jpg"
+                class="img-fluid rounded-3"
+                alt="BBCSI team at Christ the King Church, Vandeikya during the awareness campaign"
+              />
+              <figcaption class="small fw-lighter mt-2 fst-italic">
+                 BBCSI team at Christ the King Church, Vandeikya during the awareness campaign
+              </figcaption>
+            </figure>
+
+            <h5 class="mt-5 bbc-pink-text">
+              <i class="bi bi-hospital me-2"></i>Expert Medical Insights
+            </h5>
+            <div class="speaker-card">
+              <h6 class="bbc-pink-text fw-bold">Dr. Terkula Wombo</h6>
+              <p class="small text-muted mb-2">
+                Medical Director, General Hospital, Vandeikya (Guest Speaker)
+              </p>
+              <p>
+                Dr. Wombo described cancer as an abnormal malignant growth in
+                the breast of women and outlined the key aspects of
+                understanding, detecting, and treating the disease.
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="highlight-box">
+                  <h6 class="bbc-pink-text mb-3">
+                    <i class="bi bi-exclamation-triangle me-2"></i>Risk Factors
+                  </h6>
+                  <ul class="mb-0">
+                    <li>Genetics</li>
+                    <li>Gene mutation</li>
+                    <li>Obesity</li>
+                    <li>Hormone replacement therapy</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="highlight-box">
+                  <h6 class="bbc-pink-text mb-3">
+                    <i class="bi bi-eye me-2"></i>Warning Signs
+                  </h6>
+                  <ul class="mb-0">
+                    <li>Appearance of a lump</li>
+                    <li>Change in breast shape</li>
+                    <li>Nipple discharge</li>
+                    <li>Shrinking and reddening</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="highlight-box my-4">
+              <h6 class="bbc-pink-text mb-3">
+                <i class="bi bi-search me-2"></i>Diagnosis Methods
+              </h6>
+              <p class="mb-0">
+                The disease can be diagnosed through
+                <strong>self and clinical breast examinations</strong>,
+                <strong>mammography</strong>, <strong>ultrasound scan</strong>,
+                and <strong>biopsy</strong>, depending on the stage.
+              </p>
+            </div>
+
+            <div class="highlight-box my-4">
+              <h6 class="bbc-pink-text mb-3">
+                <i class="bi bi-heart-pulse me-2"></i>Treatment Options
+              </h6>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border"
+                  >Surgery (Lumpectomy)</span
+                >
+                <span class="badge bg-light text-dark border">Mastectomy</span>
+                <span class="badge bg-light text-dark border"
+                  >Radiation Therapy</span
+                >
+                <span class="badge bg-light text-dark border"
+                  >Chemotherapy</span
+                >
+                <span class="badge bg-light text-dark border"
+                  >Hormonal Therapy</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-success bg-opacity-10 p-4 rounded-3 my-4 border-start border-5 border-success"
+            >
+              <h6 class="text-success mb-3">
+                <i class="bi bi-shield-check me-2"></i>Prevention is Better Than
+                Cure
+              </h6>
+              <p class="mb-2">
+                Dr. Wombo emphasized these preventive measures:
+              </p>
+              <ul class="mb-0">
+                <li>Early medical consultation</li>
+                <li>Maintenance of a healthy lifestyle</li>
+                <li>Regular mammography scanning at age 40 and above</li>
+                <li>Monthly self breast examinations</li>
+              </ul>
+            </div>
+
+            <h5 class="mt-5 bbc-pink-text">
+              <i class="bi bi-people-fill me-2"></i>Community Support &
+              Solidarity
+            </h5>
+
+            <div class="speaker-card">
+              <h6 class="bbc-pink-text fw-bold">HRH Mrs. Betty Achiaku</h6>
+              <p class="small text-muted mb-2">Wife of Ter Kunav</p>
+              <p class="mb-0">
+                The Royal Mother thanked BBCSI for carrying the campaign to her
+                area of jurisdiction and noted that the numerous responses from
+                the participants were indications that they have understood the
+                enlightenment campaign. She encouraged the practice of early
+                detection methods as the way forward, emphasizing that
+                prevention was better than cure.
+              </p>
+            </div>
+
+            <div class="speaker-card">
+              <h6 class="bbc-pink-text fw-bold">Hon. Dennis Terkula Guda</h6>
+              <p class="small text-muted mb-2">
+                Chairman, Vandeikya LGC (represented by Hon. Mrs. Rachael Akur,
+                Supervisory Councilor for Health and Human Services)
+              </p>
+              <p class="mb-0">
+                The Chairman expressed his solid support for the enlightenment
+                campaign and pledged to do all he can to ensure its success in
+                his domain.
+              </p>
+            </div>
+
+            <figure class="my-4">
+              <img
+                src="assets/img/outreach_18.jpg"
+                class="img-fluid rounded-3"
+                alt="A volunteer at the breast cancer awareness session"
+              />
+              <figcaption class="small fw-lighter mt-2 fst-italic">
+                A volunteer at the breast cancer awareness session
+              </figcaption>
+            </figure>
+
+            <h5 class="mt-5 bbc-pink-text">
+              <i class="bi bi-chat-heart me-2"></i>Voices from the Community
+            </h5>
+            <p>
+              Most of the participants, including
+              <strong>Mama Nancy Agule</strong>,
+              <strong>Mrs. Dorcas Akur</strong>, and
+              <strong>Mr. Bemtor Akaayar</strong>, among others, separately
+              thanked the BBCSI for bringing the enlightenment campaign to their
+              doorstep and promised to use the opportunity to further enlighten
+              others.
+            </p>
+
+            <h5 class="mt-5 bbc-pink-text">
+              <i class="bi bi-church me-2"></i>A Warm Welcome
+            </h5>
+            <p>
+              Earlier, in his address of welcome, the Priest-in-Charge of Christ
+              the King Parish, Vandeikya and Dean of Vandeikya Deaconry,
+              <strong>Rev. Fr. Emmanuel Nyitar</strong>, who was represented by
+              his assistant, <strong>Rev. Fr. Justin Iorkongusu</strong>,
+              thanked BBCSI for the wonderful work they were doing, expressing
+              hope that patients will no longer die of cancer due to ignorance.
+            </p>
+
+            <div class="bg-light p-4 rounded-3 mt-5 text-center">
+              <h6 class="bbc-pink-text mb-3">
+                Together, We Can Make a Difference
+              </h6>
+              <p class="mb-3">
+                Join BBCSI in the fight against breast cancer. Early detection
+                saves lives.
+              </p>
+              <a href="get-involved.html" class="btn bbc-btn-pink"
+                >Get Involved Today</a
+              >
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bbc-pink-text bg-body">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="assets/img/bbc-logo-with-text.png"
+              alt="BBCSI Logo"
+              width="250"
+              class="mb-2"
+            />
+            <p class="mb-1 text-black-50">
+              <b class="bbc-pink-text">Address:</b> No. 6, Ako Yaweh Street, Old
+              GRA, <br />
+              Gboko, Benue State.
+            </p>
+            <p class="mb-1 text-black-50">
+              <b class="bbc-pink-text">Email: </b
+              ><a
+                href="mailto:Benuecancergroup@gmail.com"
+                target="_blank"
+                class="text-muted"
+                >Benuecancergroup@gmail.com</a
+              >
+            </p>
+            <p class="mb-1 text-black-50">
+              <b class="bbc-pink-text">Phone:</b> +234 703 301 1348
+            </p>
+            <span class="small text-muted"
+              >Certain images from
+              <a
+                href="https://freepik.com"
+                target="_blank"
+                class="bbc-pink-text"
+                >Freepik <i class="bi bi-link-45deg"></i></a
+            ></span>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-">
+            <h6 class="fw-bold">About BBCSI</h6>
+            <ul class="list-unstyled">
+              <li class="my-2">
+                <a
+                  href="our_history.html"
+                  class="text-black-50 text-decoration-none"
+                  >Our History</a
+                >
+              </li>
+              <li class="my-2">
+                <a href="about.html" class="text-black-50 text-decoration-none"
+                  >Who We Are</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="programs.html#programs"
+                  class="text-black-50 text-decoration-none"
+                  >What We Do</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="about.html#team"
+                  class="text-black-50 text-decoration-none"
+                  >Meet the Team</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-">
+            <h6 class="fw-bold">Resources</h6>
+            <ul class="list-unstyled">
+              <li class="my-2">
+                <a href="blog.html" class="text-black-50 text-decoration-none"
+                  >Blog</a
+                >
+              </li>
+              <li class="my-2">
+                <a href="media.html" class="text-black-50 text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="resources.html#downloads"
+                  class="text-black-50 text-decoration-none"
+                  >Downloads</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="resources.html#facts&myths"
+                  class="text-black-50 text-decoration-none"
+                  >Facts & Myths</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-">
+            <h6 class="fw-bold">Social Media</h6>
+            <ul class="list-unstyled">
+              <li class="my-2">
+                <a
+                  href="https://www.youtube.com/@benuebreastcancersupport"
+                  target="_blank"
+                  class="text-black-50 text-decoration-none"
+                  >YouTube</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="https://www.facebook.com/groups/236359759171185/"
+                  target="_blank"
+                  class="text-black-50 text-decoration-none"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-">
+            <h6 class="fw-bold">Legal</h6>
+            <ul class="list-unstyled">
+              <li class="my-2">
+                <a href="terms.html" class="text-black-50 text-decoration-none"
+                  >Terms of Use</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="privacy.html"
+                  class="text-black-50 text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center pt-4 text-muted mt-4">
+          <small
+            >&copy; <span id="year"></span> Benue Breast Cancer Support
+            Initiative.
+          </small>
+          <script>
+            document.getElementById("year").textContent =
+              new Date().getFullYear();
+          </script>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      window.onload = function () {
+        AOS.init({ duration: 1000, once: true });
+      };
+    </script>
+  </body>
+</html>
