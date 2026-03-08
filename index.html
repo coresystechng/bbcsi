@@ -224,6 +224,10 @@
         width: 2rem;
         height: 2rem;
       }
+      /* Navbar marquee/ticker for latest blog */
+      .latest-marquee{overflow:hidden; background-color: #f1f1f1;}
+      .latest-marquee a{display:inline-block;white-space:nowrap;animation:marquee 15s linear infinite;color:var(--bbc-pink);font-weight:600}
+      @keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -242,10 +246,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
       <div class="container flex justify-content-between">
         <a class="navbar-brand" href="index.html">
-            <img src="assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
+          <img src="assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 align-items-center">
@@ -299,7 +303,8 @@
               <a href="about.html#story" class="btn btn-outline-light btn-lg px-5">Learn More</a>
           </div>
       </div>
-  </section>
+    </section>
+    <div class="latest-marquee text-center  py-3"><a href="blog_iwd_2026.html"><i class="bi bi-link-45deg me-1"></i>Latest: International Women's Day 2026 — Mar 08, 2026 </a></div>
 
   <!-- The Problem (About Us Snippet) -->
   <section class="py-5 bg-white">
