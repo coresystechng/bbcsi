@@ -63,6 +63,7 @@
       body {
         background-color: var(--bbc-secondary);
         color: var(--bbc-dark-text);
+        overflow-x: hidden;
       }
         
       body, .content {
@@ -228,6 +229,71 @@
       .latest-marquee{overflow:hidden; background-color: #f1f1f1;}
       .latest-marquee a{display:inline-block;white-space:nowrap;animation:marquee 15s linear infinite;color:var(--bbc-pink);font-weight:600}
       @keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+      section { overflow: hidden; }
+
+      .gala-popup .modal-content {
+          background:
+              linear-gradient(rgba(12, 10, 10, 0.72), rgba(12, 10, 10, 0.78)),
+              url('assets/img/gala-night.jpg') center center/cover no-repeat;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          border-radius: 8px;
+          box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+          color: #fff;
+          overflow: hidden;
+      }
+
+      .gala-popup .modal-body {
+          padding: 2.5rem;
+      }
+
+      .gala-popup-kicker {
+          color: #f2c66d;
+          font-size: 0.85rem;
+          font-weight: 800;
+          letter-spacing: 0.08rem;
+          text-transform: uppercase;
+      }
+
+      .gala-btn-gold {
+          background-color: #c79a42;
+          border: 2px solid #c79a42;
+          border-radius: 50px;
+          color: #17110a;
+          font-weight: 800;
+          padding: 0.75rem 1.6rem;
+          transition: all 0.25s ease;
+      }
+
+      .gala-btn-gold:hover,
+      .gala-btn-gold:focus {
+          background-color: #e0b457;
+          border-color: #e0b457;
+          color: #17110a;
+          transform: translateY(-2px);
+      }
+
+      .gala-btn-clear {
+          background-color: transparent;
+          border: 2px solid rgba(255, 255, 255, 0.86);
+          border-radius: 50px;
+          color: #fff;
+          font-weight: 800;
+          padding: 0.75rem 1.6rem;
+          transition: all 0.25s ease;
+      }
+
+      .gala-btn-clear:hover,
+      .gala-btn-clear:focus {
+          background-color: rgba(255, 255, 255, 0.12);
+          border-color: #fff;
+          color: #fff;
+      }
+
+      @media (max-width: 575.98px) {
+          .gala-popup .modal-body {
+              padding: 2rem 1.25rem;
+          }
+      }
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -279,6 +345,7 @@
                 <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
               </ul>
             </li>
+            <li class="nav-item mx-2"><a class="nav-link" href="rsvp.html">Gala RSVP</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="get-involved.html#donate">DONATE NOW</a></li>
@@ -300,11 +367,12 @@
           </p>
           <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <a href="get-involved.html#donate" class="btn bbc-btn-pink btn-lg px-5 shadow-lg">DONATE NOW</a>
+              <!-- <a href="rsvp.html" class="btn btn-outline-light btn-lg px-5">Gala RSVP</a> -->
               <a href="about.html#story" class="btn btn-outline-light btn-lg px-5">Learn More</a>
           </div>
       </div>
     </section>
-    <div class="latest-marquee text-center  py-3"><a href="blog_iwd_2026.html"><i class="bi bi-link-45deg me-1"></i>Latest: International Women's Day 2026 — Mar 08, 2026 </a></div>
+    <div class="latest-marquee text-center  py-3"><a href="rsvp.html"><i class="bi bi-link-45deg me-1"></i>RSVP: BBCSI Decade of Impact Gala Night - October 17, 2026 at Royal Choice Banquet Hall, Makurdi</a></div>
 
   <!-- The Problem (About Us Snippet) -->
   <section class="py-5 bg-white">
@@ -658,6 +726,7 @@
         <div class="col-lg-2 mb-4 mb-lg-">
           <h6 class="fw-bold">Resources</h6>
           <ul class="list-unstyled">
+            <li class="my-2"><a href="rsvp.html" class="text-black-50 text-decoration-none">Gala RSVP</a></li>
             <li class="my-2"><a href="blog.html" class="text-black-50 text-decoration-none">Blog</a></li>
             <li class="my-2"><a href="media.html" class="text-black-50 text-decoration-none">Gallery</a></li>
             <li class="my-2"><a href="resources.html#downloads" class="text-black-50 text-decoration-none">Downloads</a></li>
@@ -688,6 +757,22 @@
     </div>
   </footer>
 
+  <div class="modal gala-popup" id="galaEventModal" tabindex="-1" aria-labelledby="galaEventModalLabel" aria-describedby="galaEventModalDescription" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <p class="gala-popup-kicker mb-2">October 17, 2026</p>
+          <h2 class="heading fw-bold mb-3" id="galaEventModalLabel">Decade of Impact <br> Gala Night</h2>
+          <p class="lead mb-2" id="galaEventModalDescription">Join us in an evening celebrating 10 years of impact, partnership, fundraising and lots more</p>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a class="btn gala-btn-gold" href="rsvp.html">RSVP Now</a>
+            <button type="button" class="btn gala-btn-clear" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- AOS JS -->
@@ -697,12 +782,20 @@
 
   <script>
       // Initialize AOS (Animate On Scroll)
-      window.onload = function() {
+      window.addEventListener('load', function() {
           AOS.init({
               duration: 1200, // duration of the animation in ms
               once: true,     // whether animation should only happen once - on scroll down
           });
-      };
+
+          window.setTimeout(function() {
+              const galaEventModal = document.getElementById('galaEventModal');
+              if (galaEventModal && window.bootstrap) {
+                  const modal = new bootstrap.Modal(galaEventModal);
+                  modal.show();
+              }
+          }, 3000);
+      });
       // NOTE: If using a slider (e.g., Swiper), its initialization script would go here.
   </script>
 </body>
