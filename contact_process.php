@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
         // Email subject and body
-        $subject = "New Contact Form Submission from BBCSI Website";
+        $subject = "New Contact Form Submission";
         $body = "
         You have received a new message from the BBCSI Contact Form:
 

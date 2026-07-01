@@ -20,13 +20,15 @@ function clean_text($value) {
     $value = is_string($value) ? $value : "";
     $value = trim($value);
     $value = preg_replace('/[\r\n]+/', ' ', $value);
-    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    $value = html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    return strip_tags($value);
 }
 
 function clean_message($value) {
     $value = is_string($value) ? $value : "";
     $value = trim($value);
-    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    $value = html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    return strip_tags($value);
 }
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
