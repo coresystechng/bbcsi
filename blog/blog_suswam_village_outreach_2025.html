@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Countdown to the BBCSI 10th Anniversary Gala: RSVP Now! | BBCSI</title>
+    <title>BBCSI Brings Cancer Awareness to Suswam Village | BBCSI</title>
     <meta
       name="description"
-      content="Join BBCSI as we celebrate ten years of impact at our 10th Anniversary Gala. RSVP now to secure your seat for this unforgettable evening of recognition, entertainment, and community." 
+      content="BBCSI conducts successful cancer awareness campaign in Suswam village, Ushongo LGA, reaching over 100 community members with vital health information."
     />
     <link
       rel="shortcut icon"
-      href="assets/img/bbcsi_logo.jpg"
+      href="../assets/img/bbcsi_logo.jpg"
       type="image/x-icon"
     />
     <link
@@ -102,6 +102,16 @@
         margin-bottom: 15px;
         border-left: 4px solid var(--bbc-pink);
       }
+      .speaker-card {
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .speaker-card h6 {
+        margin-bottom: 10px;
+      }
       blockquote {
         background: linear-gradient(135deg, #fdf2f8 0%, #fff 100%);
         border-left: 4px solid var(--bbc-pink);
@@ -118,6 +128,7 @@
       }
     </style>
   </head>
+  <!-- Google tag (gtag.js) -->
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-F4DL8H378V"
@@ -135,8 +146,8 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container flex justify-content-between">
-          <a class="navbar-brand" href="index.html">
-              <img src="assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
+          <a class="navbar-brand" href="../index.html">
+              <img src="../assets/img/bbcsi_logo.jpg" alt="" width="60" class="img-fluid">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -144,34 +155,35 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto mb-2 align-items-center">
               <li class="nav-item mx-2">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
               </li>
               <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="../about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   About Us
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                  <li><a class="dropdown-item" href="about.html#story">Our Story</a></li>
-                  <li><a class="dropdown-item" href="about.html#mission_vision">Mission & Vision</a></li>
-                  <li><a class="dropdown-item" href="about.html#team">Meet the Team</a></li>
-                  <li><a class="dropdown-item" href="media.html">Gallery</a></li>
-                  <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                  <li><a class="dropdown-item" href="../about.html#story">Our Story</a></li>
+                  <li><a class="dropdown-item" href="../about.html#mission_vision">Mission & Vision</a></li>
+                  <li><a class="dropdown-item" href="../about.html#team">Meet the Team</a></li>
+                  <li><a class="dropdown-item" href="../media.html">Gallery</a></li>
+                  <li><a class="dropdown-item active bbc-pink-bg" href="../blog/">Blog</a></li>
+                  <li><a class="dropdown-item" href="../resources.html">Resources</a></li>
                 </ul>
               </li>
-              <li class="nav-item mx-2"><a class="nav-link" href="programs.html">Our Programs</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="../programs.html">Our Programs</a></li>
               <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="../get-involved.html" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Get Involved
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="getInvolvedDropdown">
-                  <li><a class="dropdown-item" href="get-involved.html#volunteer">Volunteering</a></li>
-                  <li><a class="dropdown-item" href="get-involved.html#donate">Donations</a></li>
-                  <li><a class="dropdown-item" href="get-involved.html#partner">Partner With Us</a></li>
+                  <li><a class="dropdown-item" href="../get-involved.html#volunteer">Volunteering</a></li>
+                  <li><a class="dropdown-item" href="../get-involved.html#donate">Donations</a></li>
+                  <li><a class="dropdown-item" href="../get-involved.html#partner">Partner With Us</a></li>
                 </ul>
               </li>
-              <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" href="blog.html" aria-current="page">Blog</a></li>
-              <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
-              <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="get-involved.html#donate">DONATE NOW</a></li>
+              <li class="nav-item mx-2"><a class="nav-link fw-bold bbc-pink-text" href="../blog/" aria-current="page">Blog</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+              <li class="nav-item ms-lg-3"><a class="btn bbc-btn-pink" href="../get-involved.html#donate">DONATE NOW</a></li>
             </ul>
           </div>
         </div>
@@ -182,94 +194,158 @@
       <div class="container" data-aos="fade-up">
         <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
           <div class="mb-4">
-            <span class="badge bbc-pink-bg mb-3">10th Anniversary Gala</span>
+            <span class="badge bbc-pink-bg mb-3">Community Outreach</span>
             <h1 class="display-6 fw-bold heading bbc-pink-text">
-              Countdown to the BBCSI 10th Anniversary Gala: RSVP Now!
+              BBCSI Brings Cancer Awareness to Suswam Village
             </h1>
-            <p class="lead text-muted fst-italic">
-              "A decade of impact deserves an extraordinary celebration."
-            </p>
             <p class="text-muted small my-4">
-              <i class="bi bi-calendar3 me-2"></i>Published: 3 July 2026 ·
-              <i class="bi bi-person me-2 ms-2"></i>BBCSI Communications Team
+              <i class="bi bi-calendar3 me-2"></i>Published: 20 December 2025 ·
+              <i class="bi bi-person me-2 ms-2"></i>Author: BBCSI
             </p>
           </div>
           <figure class="mb-4">
             <img
-              src="assets/img/gala-night.jpg"
+              src="../assets/img/dr_uvah_outreach.JPG"
               class="img-fluid rounded-3"
-              alt="BBCSI gala celebration with community members and supporters"
+              alt="Dr. Mrs. Uvah addressing community members during the cancer awareness campaign"
             />
             <figcaption class="small fw-lighter mt-2 fst-italic">
-              Celebrating ten years of community impact and the next chapter for BBCSI.
+             Dr. Mrs. Uvah addressing community members during the cancer awareness campaign 
             </figcaption>
           </figure>
 
           <section class="fs-6">
             <p class="lead">
-              A decade of impact merits a celebration to remember.
-            </p>
-            <p>
-              This year marks the 10th Anniversary of BBCSI — a milestone that reflects ten years of vision, collaboration, growth, and meaningful contributions to our community. What began as a shared commitment to making a difference has grown into a thriving network of members, partners, supporters, and friends who continue to shape our journey.
-            </p>
-            <p>
-              To commemorate this milestone, we are thrilled to invite you to join us for the BBCSI 10th Anniversary Gala Night — an unforgettable evening celebrating our past, honoring the people who made it possible, and looking ahead to the future we will build together.
+              The Benue Breast Cancer Support Initiative (BBCSI) visited Suswam village in the Ushongo local government area of Benue State on December 20, 2025 at the invitation of Prof & Dr. Mrs. Uvah. They invited BBCSI to conduct a cancer awareness campaign in their village. It was a successful outing for BBCSI. We had over 100 persons in attendance.
             </p>
 
-            <div class="highlight-box">
-              <h6 class="bbc-pink-text mb-3">
-                <i class="bi bi-gift me-2"></i>What the Gala Will Feature
-              </h6>
-              <ul class="mb-0">
-                <li>An evening of celebration with members, partners, sponsors, and distinguished guests</li>
-                <li>Recognition of individuals and organizations that have helped shape BBCSI's success</li>
-                <li>Special entertainment, fashion show, fundraising and memorable moments</li>
-                <li>Opportunities to reconnect with familiar faces and build new relationships</li>
-                <li>A look ahead at the exciting vision for BBCSI's next decade</li>
-              </ul>
+            <h5 class="mt-5 bbc-pink-text">Community Partnership: A Welcome Invitation </h5>
+            <p>
+              The outreach program was made possible through the gracious invitation of <strong>Prof & Dr. Mrs. Uvah</strong>, who recognized the critical need for cancer awareness in their community. Their initiative in bringing BBCSI to Suswam village demonstrates the power of community-driven health education and the importance of local leadership in addressing public health challenges.
+            </p>
+
+            <blockquote>
+              "When communities take the lead in inviting health education initiatives, real change begins to happen. The people of Suswam village have shown remarkable commitment to the health and wellbeing of their community."
+              <footer>
+                — BBCSI Outreach Team
+              </footer>
+            </blockquote>
+
+            <figure class="my-4">
+              <img
+                src="../assets/img/prof_uvah.JPG"
+                class="img-fluid rounded-3"
+                alt="Prof. Uvah with BBCSI team members during the outreach event"
+              />
+              <figcaption class="small fw-lighter mt-2 fst-italic">
+                 Prof. Uvah with BBCSI team members during the outreach event
+              </figcaption>
+            </figure>
+
+            <h5 class="mt-5 bbc-pink-text">Awareness Campaign Highlights</h5>
+            <p>
+              During the comprehensive awareness session, BBCSI team members covered crucial topics including breast cancer risk factors, early detection methods, self-examination techniques, and available treatment options. The interactive format allowed community members to ask questions and share concerns, creating an open dialogue about health issues that are often considered taboo in many communities.
+            </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="highlight-box">
+                  <h6 class="bbc-pink-text mb-3">
+                    <i class="bi bi-clipboard-check me-2"></i>Topics Covered
+                  </h6>
+                  <ul class="mb-0">
+                    <li>Breast cancer awareness</li>
+                    <li>Early detection methods</li>
+                    <li>Available treatment options</li>
+                    <li>Support systems for survivors</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="highlight-box">
+                  <h6 class="bbc-pink-text mb-3">
+                    <i class="bi bi-trophy me-2"></i>Program Achievements
+                  </h6>
+                  <ul class="mb-0">
+                    <li>High community turnout</li>
+                    <li>Interactive Q&A sessions</li>
+                    <li>Distribution of educational materials</li>
+                    <li>Community commitment to health</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
+            <figure class="my-4">
+              <img
+                src="../assets/img/outreach_21.JPG"
+                class="img-fluid rounded-3"
+                alt="Community members actively participating in the awareness session"
+              />
+              <figcaption class="small fw-lighter mt-2 fst-italic">
+                Community members actively participating in the awareness session
+              </figcaption>
+            </figure>
+
+            <h5 class="mt-5 bbc-pink-text"></i>Community Impact and Testimonials</h5>
             <p>
-              Whether you have been part of our journey since the beginning or have joined us more recently, this celebration is about recognizing the collective impact we all made together.
+              The success of the Suswam village outreach goes beyond mere numbers. It represents a breakthrough in community health education and demonstrates the effectiveness of partnership-based approaches to public health challenges. The community's enthusiastic participation and engagement throughout the session showed their genuine interest in taking control of their health outcomes.
             </p>
 
-            <h5 class="mt-5 bbc-pink-text">Reserve Your Seat Today!</h5>
+            <figure class="my-4">
+              <img
+                src="../assets/img/nurse_dooyum.JPG"
+                class="img-fluid rounded-3"
+                alt="Nurse Dooyum providing health education during the outreach"
+              />
+              <figcaption class="small fw-lighter mt-2 fst-italic">
+                Nurse Dooyum providing health education during the outreach
+              </figcaption>
+            </figure>
+
+            <h5 class="mt-5 bbc-pink-text"></i>Looking Forward: Continued Partnership</h5>
             <p>
-              We are pleased to announce that RSVP registration is now officially open. We encourage you to reserve your spot as early as possible to ensure you don't miss this landmark celebration. Seating is limited, and we look forward to celebrating this important milestone with everyone who has helped make BBCSI's first ten years such a remarkable success.
+              The successful Suswam village outreach marks another milestone in BBCSI's mission to bring cancer awareness to every corner of Benue State. The organization remains committed to continuing such partnerships and reaching more communities with vital health education. The positive response from Suswam village serves as inspiration for future outreach programs and reinforces the importance of community-based health initiatives.
             </p>
 
             <div class="bg-success bg-opacity-10 p-4 rounded-3 my-4 border-start border-5 border-success">
-              <p class="mb-3 fw-semibold">
-                Visit our RSVP page today to secure your attendance and be part of this historic evening.
+              <h6 class="text-success mb-3">
+                <i class="bi bi-shield-check me-2"></i>Call to Action
+              </h6>
+              <p class="mb-2">
+                The success of this outreach demonstrates the power of community partnership in health education. BBCSI calls on other community leaders and organizations to join in this vital mission of spreading cancer awareness throughout Benue State.
               </p>
-              <a class="bbc-btn-pink" href="rsvp.html">RSVP Now</a>
+              <ul class="mb-0">
+                <li>Invite BBCSI to your community</li>
+                <li>Support cancer awareness initiatives</li>
+                <li>Share knowledge with family and friends</li>
+                <li>Participate in regular health screenings</li>
+              </ul>
             </div>
 
-            <p>
-              Thank you for being part of the BBCSI story. We can't wait to celebrate ten incredible years with you — and to begin the next chapter together.
-            </p>
-            <p>
-              Here's to the past, the present, and the future of BBCSI.
-            </p>
-            <p class="fw-bold">See you at the Gala!</p>
-
-            <div class="mt-5 pt-4 border-top">
-              <p class="text-muted small mb-0">
-                <strong>With gratitude,</strong><br>
-                BBCSI Communications Team
+            <div class="bg-light p-4 rounded-3 mt-5 text-center">
+              <h6 class="bbc-pink-text mb-3">
+                Together, We Can Save Lives
+              </h6>
+              <p class="mb-3">
+                Join BBCSI in bringing cancer awareness to more communities across Benue State. Your support makes these life-saving outreach programs possible.
               </p>
+              <a href="../get-involved.html" class="btn bbc-btn-pink"
+                >Get Involved Today</a
+              >
             </div>
           </section>
         </article>
       </div>
     </main>
 
+    <!-- Footer -->
     <footer class="py-5 bbc-pink-text bg-body">
       <div class="container py-5">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img
-              src="assets/img/bbc-logo-with-text.png"
+              src="../assets/img/bbc-logo-with-text.png"
               alt="BBCSI Logo"
               width="250"
               class="mb-2"
@@ -305,26 +381,26 @@
             <ul class="list-unstyled">
               <li class="my-2">
                 <a
-                  href="our_history.html"
+                  href="../our_history.html"
                   class="text-black-50 text-decoration-none"
                   >Our History</a
                 >
               </li>
               <li class="my-2">
-                <a href="about.html" class="text-black-50 text-decoration-none"
+                <a href="../about.html" class="text-black-50 text-decoration-none"
                   >Who We Are</a
                 >
               </li>
               <li class="my-2">
                 <a
-                  href="programs.html#programs"
+                  href="../programs.html#programs"
                   class="text-black-50 text-decoration-none"
                   >What We Do</a
                 >
               </li>
               <li class="my-2">
                 <a
-                  href="about.html#team"
+                  href="../about.html#team"
                   class="text-black-50 text-decoration-none"
                   >Meet the Team</a
                 >
@@ -335,25 +411,25 @@
             <h6 class="fw-bold">Resources</h6>
             <ul class="list-unstyled">
               <li class="my-2">
-                <a href="blog.html" class="text-black-50 text-decoration-none"
+                <a href="../blog/" class="text-black-50 text-decoration-none"
                   >Blog</a
                 >
               </li>
               <li class="my-2">
-                <a href="media.html" class="text-black-50 text-decoration-none"
+                <a href="../media.html" class="text-black-50 text-decoration-none"
                   >Gallery</a
                 >
               </li>
               <li class="my-2">
                 <a
-                  href="resources.html#downloads"
+                  href="../resources.html#downloads"
                   class="text-black-50 text-decoration-none"
                   >Downloads</a
                 >
               </li>
               <li class="my-2">
                 <a
-                  href="resources.html#facts&myths"
+                  href="../resources.html#facts&myths"
                   class="text-black-50 text-decoration-none"
                   >Facts & Myths</a
                 >
@@ -385,13 +461,13 @@
             <h6 class="fw-bold">Legal</h6>
             <ul class="list-unstyled">
               <li class="my-2">
-                <a href="terms.html" class="text-black-50 text-decoration-none"
+                <a href="../terms.html" class="text-black-50 text-decoration-none"
                   >Terms of Use</a
                 >
               </li>
               <li class="my-2">
                 <a
-                  href="privacy.html"
+                  href="../privacy.html"
                   class="text-black-50 text-decoration-none"
                   >Privacy Policy</a
                 >
