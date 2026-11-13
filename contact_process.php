@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Collect and sanitize inputs
-    $name = htmlspecialchars(trim($_POST["Name"]));
-    $email = htmlspecialchars(trim($_POST["Email"]));
-    $role = htmlspecialchars(trim($_POST["Role"]));
-    $message = htmlspecialchars(trim($_POST["Message"]));
+    $name = htmlspecialchars(trim($_POST["Name"] ?? ''));
+    $email = htmlspecialchars(trim($_POST["Email"] ?? ''));
+    $role = htmlspecialchars(trim($_POST["Role"] ?? ''));
+    $message = htmlspecialchars(trim($_POST["Message"] ?? ''));
 
     // Validate form fields
     if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
