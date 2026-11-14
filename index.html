@@ -294,6 +294,18 @@
               padding: 2rem 1.25rem;
           }
       }
+
+      #donate .card {
+          border: none;
+          border-radius: 1rem;
+          overflow: hidden;
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      #donate .card:hover {
+          transform: scale(1.03);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      }
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -430,6 +442,37 @@
           </p>
         </div>
     </div>
+    </div>
+  </section>
+
+  <!-- Donate / Support -->
+  <section id="donate" class="py-5 bg-white" data-aos="fade-up" data-aos-delay="200">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="fw-bold heading bbc-pink-text">Support Our Work</h1>
+          <p class="lead">Your gift helps pay for screening, treatment support loans, transport for patients and community education campaigns.</p>
+          <div class="card bbc-pink-bg text-white my-4 shadow-none">
+            <div class="card-body">
+              <p class="lh-lg lead">
+                <strong class="text-uppercase">Bank Transfer</strong>
+                <br>
+                Account name: Benue Breast Cancer Support Initiative
+                <br>
+                Account number: <span class="fw-bold">1808708097</span>
+                <button type="button" class="btn btn-sm btn-outline-light ms-2" onclick="(function(btn){const num='1808708097';navigator.clipboard.writeText(num).then(()=>{const prev=btn.innerText;btn.innerText='Copied';btn.disabled=true;setTimeout(()=>{btn.innerText=prev;btn.disabled=false;},1500);}).catch(()=>{alert('Unable to copy to clipboard')});})(this);">Copy</button>
+                <br>
+                Bank Name: Access Bank
+              </p>
+            </div>
+          </div>
+          <p class="mb-0 fw-light small mb-4 d-none d-lg-block"><strong class="bbc-pink-text fw-bold">Note: </strong> Non-Naira donations can be made using <a href="https://www.sendwave.com/en" target="_blank">Sendwave</a> and <a href="https://www.westernunion.com/ng" target="_blank">Western Union</a> or any other available to the donor. <br>Kindly send a confirmation email to <a href="mailto:Benuecancergroup@gmail.com">Benuecancergroup@gmail.com</a> with your transaction details to help us acknowledge your donation.</p>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+          <img src="assets/img/outreach-3.png" class="img-fluid w-100 rounded-4" alt="">
+        </div>
+      </div>
     </div>
   </section>
 
